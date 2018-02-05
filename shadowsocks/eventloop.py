@@ -55,6 +55,45 @@ EVENT_NAMES = {
 # we check timeouts every TIMEOUT_PRECISION seconds
 TIMEOUT_PRECISION = 10
 
+#kqueue=select.kqueue()返回一个内核的queue object
+#该kqueue拥有以下方法:
+#1.kqueue.close() Close the control file descriptor of the kqueue object. 关闭kqueue实例的控制文件描述符
+#2.kqueue.closed  True if the kqueue object is close. kqueue实例是否关闭
+#3.kqueue.fileno() Return the file descriptor number of the control fd.返回返回控制文件的数字格式的文件描述符
+#4.kqueue.fromfd(fd) Create a kqueue object from a given file descriptor. 从一个给定的文件描述符创建一个kqueue实例对象
+#5.kqueue.control(changelist, max_events[, timeout=None]) -->eventlist. 返回一个事件列表（kevent事件）。用于开始监听并返回监听到的kevent
+#  ·changelist must be an iterable of kevent object or None
+#  ·max_events must be 0 or a positive integer
+#  ·timeout in seconds (floats possible)
+#select.kevent(ident, filter=KQ_FILTER_READ, flags=KQ_EV_ADD, fflags=0, data=0, udata=0)Returns a kernel event object.返回一个（用于监听）内核event对象
+#kevent事件内容:{kevent.ident:value, kevent.filter:value, kevent.flags:value, kevent.fflags:value, kevent.data:value, kevent.udata:value}
+#kevent.ident: Value used to identify the event. The interpretation depends on the filter but it’s usually the file descriptor. In the constructor ident can either be an int or an object with a fileno() method. kevent stores the integer internally.它的值用来标识一个事件。它的解释依赖于filter，但通常代表文件描述符。
+#kevent.filter: Name of the kernel filter. 内核过滤器的名称
+#filter常量:
+#Constant           Meaning
+#KQ_FILTER_READ     Takes a descriptor and returns whenever there is data available to read
+#KQ_FILTER_WRITE    Takes a descriptor and returns whenever there is data available to write
+#KQ_FILTER_AIO      AIO requests
+#KQ_FILTER_VNODE    Returns when one or more of the requested events watched in fflag occurs
+#KQ_FILTER_PROC     Watch for events on a process id
+#KQ_FILTER_NETDEV   Watch for events on a network device [not available on Mac OS X]
+#KQ_FILTER_SIGNAL   Returns whenever the watched signal is delivered to the process
+#KQ_FILTER_TIMER    Establishes an arbitrary timer
+#kevent.flags: Filter action. 过滤器对应的执行动作
+#flags常量包括:
+#Constant       Meaning
+#KQ_EV_ADD      Adds or modifies an event
+#KQ_EV_DELETE   Removes an event from the queue
+#KQ_EV_ENABLE   Permitscontrol() to returns the event
+#KQ_EV_DISABLE  Disablesevent
+#KQ_EV_ONESHOT  Removes event after first occurrence
+#KQ_EV_CLEAR    Reset the state after an event is retrieved
+#KQ_EV_SYSFLAGS internal event
+#KQ_EV_FLAG1    internal event
+#KQ_EV_EOF      Filter specific EOF condition
+#KQ_EV_ERROR    See return values
+#kevent.data: Filter specific data.
+#kevent.udata: User defined value.
 
 class KqueueLoop(object):
 
@@ -67,8 +106,10 @@ class KqueueLoop(object):
     def _control(self, fd, mode, flags):
         events = []
         if mode & POLL_IN:
+            #生成一个文件描述符fd的读操作事件，并添加到events列表中，用于后续监听
             events.append(select.kevent(fd, select.KQ_FILTER_READ, flags))
         if mode & POLL_OUT:
+            #生成一个文件描述符fd的写操作事件，并添加到events列表中，用于后续监听
             events.append(select.kevent(fd, select.KQ_FILTER_WRITE, flags))
         for e in events:
             self._kqueue.control([e], 0)
@@ -76,6 +117,7 @@ class KqueueLoop(object):
     def poll(self, timeout):
         if timeout < 0:
             timeout = None  # kqueue behaviour
+        #开始监听kqueue，并返回一个kevent.{kevent.ident:value, kevent.filter:value, kevent.flags:value, kevent.fflags:value, kevent.data:value, kevent.udata:value}
         events = self._kqueue.control(None, KqueueLoop.MAX_EVENTS, timeout)
         results = defaultdict(lambda: POLL_NULL)
         for e in events:
@@ -132,10 +174,14 @@ class SelectLoop(object):
     def poll(self, timeout):
         r, w, x = select.select(self._r_list, self._w_list, self._x_list,
                                 timeout)
+        #dict = connections.defaultdict()返回一个带缺省值的dict. dict[item] = value,当item不存在时会创建对应条目并赋值为value
         results = defaultdict(lambda: POLL_NULL)
         for p in [(r, POLL_IN), (w, POLL_OUT), (x, POLL_ERR)]:
             for fd in p[0]:
                 results[fd] |= p[1]
+        #dict.items()返回可遍历的(键, 值) 元组数组。
+        #eg:  dict       = {'a': 3, 'b': 1, 'c': 1, 'd': 2, 'e': 2}
+        #     dict.items = [('a', 3), ('b', 1), ('c', 1), ('d', 2), ('e', 2)]
         return results.items()
 
     def register(self, fd, mode):

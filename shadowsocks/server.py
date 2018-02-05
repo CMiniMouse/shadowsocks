@@ -88,8 +88,8 @@ def main():
         signal.signal(signal.SIGINT, int_handler)
 
         try:
-            loop = eventloop.EventLoop()
-            dns_resolver.add_to_loop(loop)
+            loop = eventloop.EventLoop()    #生成循环处理事件对象
+            dns_resolver.add_to_loop(loop)  #将循环事件对象loop加载到DNSResolver实例dns_resolver上
             list(map(lambda s: s.add_to_loop(loop), tcp_servers + udp_servers))
 
             daemon.set_user(config.get('user', None))

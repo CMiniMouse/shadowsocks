@@ -1,7 +1,7 @@
 import os
 import sys
-sys.path.append('/Users/xiangqian5/OpenSourceSoft/shadowsocks')
-sys.path.append('/Users/xiangqian5/OpenSourceSoft/shadowsocks/shadowsocks')
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../shadowsocks'))
 import common
 
 address = '127.0.0.1'.encode(encoding='utf-8')
@@ -49,8 +49,14 @@ rlist = ['a', 'b', 'c']
 wlist = ['a', 'd', 'e']
 result = defaultdict(lambda: 0)
 for p in [(rlist, 1), (wlist, 2)]:
+    print("p0", p[0])
     for fd in p[0]:
-        print(fd)
         result[fd] |= p[1]
+        print(result)
 print(result.items())
-print((rlist, 1))
+
+def test():
+    events = (['a', 'read'], ['b', 'read'], ['c', 'write'])
+    return [(1, fd, event) for fd, event in events]
+eve = test()
+print(eve)
