@@ -571,15 +571,34 @@ class TCPRelay(object):
             listen_port = config['server_port']
         self._listen_port = listen_port
 
+        #socket.getaddrinfo(host,  port, family=0, socktype=0, proto=0, flags=0)
+        #根据给定的参数host/port，相应的转换成一个包含用于创建socket对象的五元组，
+        #参数host为域名(也可以是ipaddress)，以字符串形式给出代表一个IPV4/IPV6地址或者None.
+        #参数port如果字符串形式就代表一个服务名，比如“http”"ftp""email"等，或者为数字，或者为None
+        #参数family为地主族，可以为AF_INET:2  ，AF_INET6:30 ，AF_UNIX.
+        #参数socketype可以为SOCK_STREAM(TCP)或者SOCK_DGRAM(UDP)
+        #参数proto通常为0可以直接忽略  SOL_TCP:6 SOL_UDP:17
+        #参数flags为AI_*的组合，比如AI_NUMERICHOST，它会影响函数的返回值.
+        #该函数返回一个五元组(family, socktype, proto, canonname, sockaddr)，同时第五个参数sockaddr也是一个二元组(address, port).
+        #eg:
+        #       host = 'www.chengxq.com'
+        #       listen_port = 8388
+        #       addrs = socket.getaddrinfo(host, listen_port, 0, socket.SOCK_STREAM, socket.SOL_TCP)
+        #       print(addrs)
+        #       [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('47.52.67.159', 8388))]
         addrs = socket.getaddrinfo(listen_addr, listen_port, 0,
                                    socket.SOCK_STREAM, socket.SOL_TCP)
         if len(addrs) == 0:
             raise Exception("can't get addrinfo for %s:%d" %
                             (listen_addr, listen_port))
         af, socktype, proto, canonname, sa = addrs[0]
+        #socket.socket 按照给定参数创建一个socket套接字
         server_socket = socket.socket(af, socktype, proto)
         server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        #将socket绑定到特定的地址（host, port）
+        #server_socket.bind(sockaddr)   server_socket.bind为socket.socket创建的socket
         server_socket.bind(sa)
+        #server_socket.setblocking(flag)如果flag为0，则将套接字设为非阻塞模式，否则将套接字设为阻塞模式（默认值）。非阻塞模式下，如果调用recv()没有发现任何数据，或send()调用无法立即发送数据，那么将引起socket.error异常
         server_socket.setblocking(False)
         if config['fast_open']:
             try:
