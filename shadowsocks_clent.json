@@ -1,0 +1,11 @@
+{
+    "server": "47.52.67.159",
+    "server_port":8387,
+    "local_port":1082,
+    "password":"foobar7",
+    "timeout":600,
+    "method":"aes-256-cfb",
+    "local_address":"127.0.0.1",
+    "fast_open":false
+}
+

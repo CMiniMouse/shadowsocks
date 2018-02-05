@@ -56,9 +56,16 @@ def main():
 
     tcp_servers = []
     udp_servers = []
+    #需要看看asyncdns.DNSResolver模块实现
     dns_resolver = asyncdns.DNSResolver()
     port_password = config['port_password']
+
+    #由于python都是引用，而python有GC机制，所以，del语句作用在变量上，而不是数据对象上。del删除的是变量，而不是数据。
     del config['port_password']
+
+    #items方法是将字典中所有的项以列表的形式返回,其中列表中的每一项都是以键值对的形式表现的
+    #eg.        d={'title':'python web site ','url':'http://www.python.org','span':0}
+    #d.items()--> [('url','http://www.python.org'),('span',0),('title','python web site')]
     for port, password in port_password.items():
         a_config = config.copy()
         a_config['server_port'] = int(port)

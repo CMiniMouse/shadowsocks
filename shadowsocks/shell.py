@@ -62,7 +62,10 @@ def print_shadowsocks():
         pass
     print('Shadowsocks %s' % version)
 
-
+#os.path.exists判断文件是否存在
+#os.path.dirname(__file__)获取python文件运行时的路径(在idle中运行会报错，因为没有从文件中运行)
+#os.path.dirname('/Users/helen/Workspace/code/shadowsocks/mytest/mytest.py')-->return /Users/helen/Workspace/code/shadowsocks/mytest
+#os.path.dirname('shadowsocks/mytest/mytest.py')-->return shadowsocks/mytest
 def find_config():
     config_path = 'config.json'
     if os.path.exists(config_path):
@@ -139,6 +142,14 @@ def get_config(is_local):
                     'forbidden-ip=', 'user=', 'manager-address=', 'version']
     try:
         config_path = find_config()
+        #getopt.getopt(sys.argv[1:], shortopts, longopts)
+        #参数sys.argv[1:]从命令行的第二个参数开始进行接收（第一个参数是脚本名）
+        #参数shortopts:短参数.个人理解就是单个字母'h'之类的。本文中shortopts = 'hd:s:b:p:k:l:m:c:t:vq' 字母后没有‘:’的，表示后边不带参数，带':'表示后边有参数
+        #eg: python test.py -h -d start -c file.json
+        #参数longopts:长参数.即匹配的option是单个单词，option后有‘=’的带有有参数，不带的没有参数.长参数的option:  --help   --longfile file.log
+        #返回值：option的list，和参数的list
+        #eg:  python mytest.py -h -u root
+        #     [('-h', ''), ('-u', 'root')] []
         optlist, args = getopt.getopt(sys.argv[1:], shortopts, longopts)
         for key, value in optlist:
             if key == '-c':
@@ -214,6 +225,7 @@ def get_config(is_local):
         print_help(is_local)
         sys.exit(2)
 
+    #dict.get('key1', 'defaultvalue')  从字典中获取键为key1的value，如果指定的键不存在时，返回默认值‘defaultvalue’
     config['password'] = to_bytes(config.get('password', b''))
     config['method'] = to_str(config.get('method', 'aes-256-cfb'))
     config['port_password'] = config.get('port_password', None)
