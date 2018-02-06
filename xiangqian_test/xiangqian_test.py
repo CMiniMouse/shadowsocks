@@ -28,13 +28,14 @@ print(addrs)
 
 af, socktype, proto, canonname, sockaddr = addrs[0]
 print(sockaddr)
+'''
 server_socket = socket.socket(af, socktype, proto)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server_socket.bind(sockaddr)
 server_socket.setblocking(False)
 server_socket.listen(1024)
 server_socket.close()
-
+'''
 import select
 
 if hasattr(select, 'epoll'):
@@ -60,3 +61,39 @@ def test():
     return [(1, fd, event) for fd, event in events]
 eve = test()
 print(eve)
+
+cached_keys = {}
+cached_key = '%s-%d-%d' % (b'12345', 16, 16)
+print(cached_key)
+
+import hashlib
+
+cached_keys = {}
+def EVP_BytesToKey(password, key_len, iv_len):
+    cached_key = '%s-%d-%d' % (password, key_len, iv_len)
+    m = []
+    i = 0
+    while len(b''.join(m)) < (key_len + iv_len):
+        md5 = hashlib.md5()
+        data = password
+        if i > 0:
+            data = m[i - 1] + password
+        md5.update(data)
+        m.append(md5.digest())
+        i += 1
+    ms = b''.join(m)
+    key = ms[:key_len]
+    iv = ms[key_len:key_len + iv_len]
+    cached_keys[cached_key] = (key, iv)
+    print("m:", m)
+    print("ms:", ms)
+    print("key:", key)
+    print("iv:", iv)
+    print("cached_keys:", cached_keys)
+EVP_BytesToKey(b'12345', 16, 16)
+
+
+iv = os.urandom(16)
+print('iv = ', iv)
+iv = iv[:16]
+print('iv = ', iv)

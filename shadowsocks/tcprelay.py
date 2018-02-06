@@ -94,7 +94,7 @@ class TCPRelayHandler(object):
     def __init__(self, server, fd_to_handlers, loop, local_sock, config,
                  dns_resolver, is_local):
         self._server = server
-        self._fd_to_handlers = fd_to_handlers
+        self._fd_to_handlers = fd_to_handlers   ##??? TCPRelay handler_event传入的_fd_to_handlers,目前没有找到哪里赋值的,下边
         self._loop = loop
         self._local_sock = local_sock
         self._remote_sock = None

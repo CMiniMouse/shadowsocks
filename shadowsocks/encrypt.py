@@ -25,14 +25,14 @@ import logging
 from shadowsocks import common
 from shadowsocks.crypto import rc4_md5, openssl, sodium, table
 
-
+#dict.update(dict1)将dict1的key-value键值对添加到dict中 rc4_md5.ciphers = {'rc4-md5': (16, 16, create_cipher),}
 method_supported = {}
 method_supported.update(rc4_md5.ciphers)
 method_supported.update(openssl.ciphers)
 method_supported.update(sodium.ciphers)
 method_supported.update(table.ciphers)
 
-
+#os.urandom(length)返回一个length长度字节的随机字符串
 def random_string(length):
     return os.urandom(length)
 
@@ -47,6 +47,9 @@ def try_cipher(key, method=None):
 def EVP_BytesToKey(password, key_len, iv_len):
     # equivalent to OpenSSL's EVP_BytesToKey() with count 1
     # so that we make the same key and iv as nodejs version
+    
+    #'%s-%d-%d'为fmt格式,用%后面的值为fmt参数进行赋值
+    #eg: cached_key = '%s-%d-%d' % (b'12345', 16, 16)   cached_key = b'12345'-16-16
     cached_key = '%s-%d-%d' % (password, key_len, iv_len)
     r = cached_keys.get(cached_key, None)
     if r:
@@ -54,6 +57,16 @@ def EVP_BytesToKey(password, key_len, iv_len):
     m = []
     i = 0
     while len(b''.join(m)) < (key_len + iv_len):
+        #1.MD5的全称是Message-Digest Algorithm 5（信息-摘要算法）。128位长度。目前MD5是一种不可逆算法。
+        #具有很高的安全性。它对应任何字符串都可以加密成一段唯一的固定长度的代码。
+        #SHA1的全称是Secure Hash Algorithm(安全哈希算法) 。SHA1基于MD5，加密后的数据长度更长.
+        #2.摘要算法又称哈希算法、散列算法。它通过一个函数，把任意长度的数据转换为一个长度固定的数据串（通常用16进制的字符串表示）。
+        #摘要算法就是通过摘要函数 f() 对任意长度的数据 data 计算出固定长度的摘要 digest。摘要算法可以用来检验数据是否改变。
+        #3.hashlib是个专门提供hash算法的库，里面包括md5, sha1, sha224, sha256, sha384, sha512.
+        #md5 = hashlib.md5()生成一个md5加密模式的hash对象
+        #md5.update(data)以字符串形式的data更新hash对象md5
+        #md5.digest()返回摘要,作为二进制数据字符串值
+        #md5.hexdigest()返回摘要,作为十六进制数据字符串值
         md5 = hashlib.md5()
         data = password
         if i > 0:
@@ -70,14 +83,14 @@ def EVP_BytesToKey(password, key_len, iv_len):
 
 class Encryptor(object):
     def __init__(self, key, method):
-        self.key = key
-        self.method = method
+        self.key = key          #passwd
+        self.method = method    #加密方法.eg:rc4_md5...
         self.iv = None
         self.iv_sent = False
         self.cipher_iv = b''
         self.decipher = None
         method = method.lower()
-        self._method_info = self.get_method_info(method)
+        self._method_info = self.get_method_info(method)    #like (16, 16, create_cipher)
         if self._method_info:
             self.cipher = self.get_cipher(key, method, 1,
                                           random_string(self._method_info[1]))
