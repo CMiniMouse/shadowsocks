@@ -147,6 +147,7 @@ class TCPRelayHandler(object):
         print("self._downstream_status:", self._downstream_status)
         print("self._client_address:", self._client_address)
         print("self._remote_address:", self._remote_address or "null")
+        print("self._chosen_server:", self._chosen_server)
         print("=======================END===========================")
     
     @property
@@ -353,6 +354,9 @@ class TCPRelayHandler(object):
         return remote_sock
 
     def _handle_dns_resolved(self, result, error):
+        print("\r\n--------------->_handle_dns_resolved<----------------\r\n")
+        print("result:", result)
+        
         if error:
             self._log_error(error)
             self.destroy()
@@ -420,6 +424,7 @@ class TCPRelayHandler(object):
         self._update_activity(len(data))
         if not is_local:
             data = self._encryptor.decrypt(data)
+            print("_on_local_read=========decryptdata:", data)
             if not data:
                 return
         if self._stage == STAGE_STREAM:
@@ -443,7 +448,7 @@ class TCPRelayHandler(object):
         data = None
         try:
             data = self._remote_sock.recv(BUF_SIZE)
-
+            print("_on_remote_read======> data", data)
         except (OSError, IOError) as e:
             if eventloop.errno_from_exception(e) in \
                     (errno.ETIMEDOUT, errno.EAGAIN, errno.EWOULDBLOCK):
@@ -454,7 +459,9 @@ class TCPRelayHandler(object):
         self._update_activity(len(data))
         if self._is_local:
             data = self._encryptor.decrypt(data)
+            print("_on_remote_read sssclient-->ssserver ======> data", data)
         else:
+            print("_on_remote_read target --> ssserver  ======> data", data)
             data = self._encryptor.encrypt(data)
         try:
             self._write_to_sock(data, self._local_sock)
@@ -470,6 +477,7 @@ class TCPRelayHandler(object):
         if self._data_to_write_to_local:
             data = b''.join(self._data_to_write_to_local)
             self._data_to_write_to_local = []
+            print("WWWWWWWWWWWWWWWWWWW:_on_local_write--senddata:", data)
             self._write_to_sock(data, self._local_sock)
         else:
             self._update_stream(STREAM_DOWN, WAIT_STATUS_READING)
@@ -480,6 +488,7 @@ class TCPRelayHandler(object):
         if self._data_to_write_to_remote:
             data = b''.join(self._data_to_write_to_remote)
             self._data_to_write_to_remote = []
+            print("WWWWWWWWWWWWWWWWWWW:_on_remote_write--senddata:", data)
             self._write_to_sock(data, self._remote_sock)
         else:
             self._update_stream(STREAM_UP, WAIT_STATUS_READING)
@@ -511,10 +520,18 @@ class TCPRelayHandler(object):
                 if self._stage == STAGE_DESTROYED:
                     return
             if event & (eventloop.POLL_IN | eventloop.POLL_HUP):
+                if self._is_local:
+                    print("\r\n::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::\r\n")
+                else:
+                    print("\r\n::::::::::::::::::::::::::::::: ssserver :::::::::::::::::::::::::::::::\r\n")
                 self._on_remote_read()
                 if self._stage == STAGE_DESTROYED:
                     return
             if event & eventloop.POLL_OUT:
+                if self._is_local:
+                    print("\r\n::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::\r\n")
+                else:
+                    print("\r\n::::::::::::::::::::::::::::::: ssserver :::::::::::::::::::::::::::::::\r\n")
                 self._on_remote_write()
         elif sock == self._local_sock:
             if event & eventloop.POLL_ERR:
@@ -522,10 +539,18 @@ class TCPRelayHandler(object):
                 if self._stage == STAGE_DESTROYED:
                     return
             if event & (eventloop.POLL_IN | eventloop.POLL_HUP):
+                if self._is_local:
+                    print("\r\n::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::\r\n")
+                else:
+                    print("\r\n::::::::::::::::::::::::::::::: ssserver :::::::::::::::::::::::::::::::\r\n")
                 self._on_local_read()
                 if self._stage == STAGE_DESTROYED:
                     return
             if event & eventloop.POLL_OUT:
+                if self._is_local:
+                    print("\r\n::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::\r\n")
+                else:
+                    print("\r\n::::::::::::::::::::::::::::::: ssserver :::::::::::::::::::::::::::::::\r\n")
                 self._on_local_write()
         else:
             logging.warn('unknown socket')

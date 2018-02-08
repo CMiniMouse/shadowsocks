@@ -1,6 +1,6 @@
 {
     "server": "47.52.67.159",
-    "server_port":443,
+    "server_port":8081,
     "local_port":1082,
     "password":"tkfkd100331QIAN",
     "timeout":600,

@@ -189,6 +189,8 @@ def testtcp():
     #recv socks server req reply
     read_server_response = tcp.recv(1024)
     print("ecv socks server req reply: ", read_server_response)
+
+    time.sleep(200)
     tcp.close()
     
 if __name__ == '__main__':
