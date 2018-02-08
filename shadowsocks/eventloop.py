@@ -301,7 +301,7 @@ class EventLoop(object):
                     import traceback
                     traceback.print_exc()
                     continue
-
+                        
             for sock, fd, event in events:
                 handler = self._fdmap.get(fd, None)
                 if handler is not None:
@@ -310,7 +310,9 @@ class EventLoop(object):
                         handler.handle_event(sock, fd, event)
                     except (OSError, IOError) as e:
                         shell.print_exception(e)
+                    
             now = time.time()
+
             if asap or now - self._last_time >= TIMEOUT_PRECISION:
                 for callback in self._periodic_callbacks:
                     callback()

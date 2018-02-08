@@ -97,3 +97,9 @@ iv = os.urandom(16)
 print('iv = ', iv)
 iv = iv[:16]
 print('iv = ', iv)
+
+data = b'\x03\x0ewww.google.com\x00\x50'
+
+print(data)
+print(data.decode()[2])
+print(data.decode()[0])

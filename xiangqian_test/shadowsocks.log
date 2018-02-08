@@ -1,0 +1,1318 @@
+
+2018-02-08 15:26:54 DEBUG    accept
+2018-02-08 15:26:54 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:26:54 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51930)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51930)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51930)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x02\x00\x02'
+2018-02-08 15:26:55 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51930)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51930)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51930)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x11www.google.com.hk\x01\xbb'
+data: b'\x03\x11www.google.com.hk\x01\xbb'
+addrtype: 3
+data[1]: 17
+2018-02-08 15:26:55 INFO     connecting www.google.com.hk:443 from 127.0.0.1:51930
+2018-02-08 15:26:55 INFO     TCP Handler event: sock:10, event:4
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51931), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51930)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51931), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51930)
+self._remote_address: ('www.google.com.hk', 443)
+=======================END===========================
+2018-02-08 15:27:05 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51931), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51930)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51931), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51930)
+self._remote_address: ('www.google.com.hk', 443)
+=======================END===========================
+2018-02-08 15:27:05 DEBUG    destroy: www.google.com.hk:443
+2018-02-08 15:27:05 DEBUG    destroying remote
+2018-02-08 15:27:05 DEBUG    destroying local
+2018-02-08 15:30:35 DEBUG    accept
+2018-02-08 15:30:35 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x1dapidata.googleusercontent.com\x01\xbb'
+data: b'\x03\x1dapidata.googleusercontent.com\x01\xbb'
+addrtype: 3
+data[1]: 29
+2018-02-08 15:30:35 INFO     connecting apidata.googleusercontent.com:443 from 127.0.0.1:51938
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x16\x03\x01\x00\xfe\x01\x00\x00\xfa\x03\x035\xff\xfa\xca\x0f\xc3\xd7\x18\xf4\x94\xd53J\xabF\x95I\xff&\xeeT\x90\xcc\xd9\x82#Z\x93\xceS\x96\x82 .\x85\xcan5\xff\xc1\xb5\x0f\x85\xc8z\x19\x0c}\x16\x8c\x05\xfc\xbb)0\x12\x0f\x97\xb3\xc0to-2\xc1\x00(\xc0,\xc0+\xc0$\xc0#\xc0\n\xc0\t\xcc\xa9\xc00\xc0/\xc0(\xc0\'\xc0\x14\xc0\x13\xcc\xa8\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x01\x00\x00\x89\xff\x01\x00\x01\x00\x00\x00\x00"\x00 \x00\x00\x1dapidata.googleusercontent.com\x00\x17\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x00\x1b\x00\x19\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18'
+2018-02-08 15:30:35 DEBUG    accept
+2018-02-08 15:30:35 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51940)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51940)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51940)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51940)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51940)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51940)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x16mail.staff.sina.com.cn\x01\xbb'
+data: b'\x03\x16mail.staff.sina.com.cn\x01\xbb'
+addrtype: 3
+data[1]: 22
+2018-02-08 15:30:35 INFO     connecting mail.staff.sina.com.cn:443 from 127.0.0.1:51940
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51940)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51940)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51941)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51940)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+_on_local_read=========data: b"\x16\x03\x01\x00\xec\x01\x00\x00\xe8\x03\x03\xe7\x9e/@~F\x1c\xa7J\xc0M\x82\tHe\xbfM\xcad\xb3P\xaa\x01\xc0\xe2\xeb\x84}v8\x9f\xf1\x00\x00(\xc0,\xc0+\xc0$\xc0#\xc0\n\xc0\t\xcc\xa9\xc00\xc0/\xc0(\xc0'\xc0\x14\xc0\x13\xcc\xa8\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x01\x00\x00\x97\xff\x01\x00\x01\x00\x00\x00\x00\x1b\x00\x19\x00\x00\x16mail.staff.sina.com.cn\x00\x17\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x000\x00.\x02h2\x05h2-16\x05h2-15\x05h2-14\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18"
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:10, event:4
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:12, event:4
+sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51941), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51940)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51941), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51940)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+2018-02-08 15:30:35 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x14\x03\x03\x00\x01\x01\x16\x03\x03\x00(\x00\x00\x00\x00\x00\x00\x00\x00\x0c\xdbA!\x86\xb3o!\x8d\x1c\x82\x81\x1d\xf8b\xb7\xa8t\x03/k<\xf1\xf8\xd5\x8f\xaf:\x1c\xb6\xd2N'
+2018-02-08 15:30:36 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x17\x03\x03\x02\r\x00\x00\x00\x00\x00\x00\x00\x01d\x8a\xbc\xbe\xde\x08/\xff\xd5`P\x9d\xa0\x8d\x16\xe7H\xb8mhgf\x81p\x10\x96\x1a\xb1Vd\x13\xaa\x14\xa5K\xfaks_\x9bC\xd61j\x16\xbb~\xe5"\xa66\xc5\x99N\x9b;\xf1E\'\tsmyCB\x9bA\xa4\x04W.\xe8 \xf5\x13\xfc\xc0\xb5AS\x94\xfb\x9a\xd0\xca8\xbf\xfed\xee\xb2\xa89G\xb6\xb3\xc0\xd0h\xa2\xd7\x1f\xe26\xef\xac\xe4\xf3\xab\xf5K\x8b\xfeG\xcc?.Z\x16Z\x98y]D\xbc\xa3\x18\x90V\x9e,\xc40\x05Ax\xf2LGl\xb7\x1aH\xf6\x92\xb9\x9e=\xd9\xb2\\\xe0\x91\xd3\xed\x16\xa7\xc3\x98\xd37\x9f\xcdQ_WNt,\x0f\xbdHmr\xd8\x1e\xba\x9ab\x1cSG\xd2\x07\x9e\x87\xae\x01a\xd6q\x1dTO1\x03\xbe\xac\x1569\rf\xac#\x97y\xaf\xedII\xca\xc0\xfc"I\x00\xab\x05\xf0\xbeB\xa3\x18/\x7fs\x05)\xe4\xfez9\xb3\xacr#_}\xeb\xb67\x886\x81\xe6\xdb\xf7q\x1c\x80\xf1\x8e3\x0f\x1d\x9bY\xc2 \x8c\n\xab\xb8v\x1c\x852\x80"\xcfM\xacwDa\xae\x12\x81\xa9\xc4\xb8m\x91}\xc4\x92\xa6\x91p\x84\x92\x95N\xa8\xfb5\xbdt6\x15Tq\xd9\xc1\xa0\x8fk=\xbd\xc5R2iD*\xb50\x1c\xa8s\xb7\xeb9\x94\xa9b\xa8le\x02\\\xc9\x9d\x0b\xb2\xd7\\ba)\x89\xb1I\xedZ\\3C\xd8|x\x01\xc3\xfa2\xe2\xcdQ\xf1w\xa2w\xdf\xd2\x1b\xe3Qa\xe5(\x8cZ`\xb9\xb8\xc3_\x15\xa5Ew\xc8\x0cq\x81\xf7\xeb\xf4\xd7\xccr\xb4[t\xe9\x1b\x8eP\x13\xa3\xffe\xe8\x08lnsNQ\x1d3\x05-#\xec<H\x1a\xe3\xd2H\x12bG\x84p\xb2\xd2__\xd4\xdf\xfb\x01)j\xd6\xe0\x12\xcc\xf0\xd6\xbc<\xca\x8f\xbbF\xd7Y\x19@\xcaP\xe3\x02x\x1b\xc8\xacD\xd9\xda\x0b\x1au.\x80\x0f\xf1\x83\xd2\x801pb\xebSO_\xcb\xc4\xcc\xce\x03\x89\xb5 \xec\xe5\x1bs\x82\xfa\xdc[&p\xb0ou\xdd\xee$ 2{y\x87\xada1\xc5w\x88\xc5\x17\x03\x03\x08\xc1\x00\x00\x00\x00\x00\x00\x00\x02\xce\x1a\xff\x8d\x99\xf19\x15Wj\x0e\x0e`\xb9\xe9IQ\xb4\x04\\\xf0\x85\x7f\x93\r\xda.d\x0e\xe1\xa5S\xd3K\x9e\x13\xe5P\x84qPT\xc2\xb0\xf6\x8c\x0f\x82\x11l-P\xf8w,\xcfZ\xd7P\'z\xbb\xc2\xe3\xa9Fr\xef\x94\xb3^J\xf8V$+@\xebh\x9c\xbb\xdc\x19\x7f\x071O1\xfe\xef]\xa1g\xb2\xdet\xdf\'\xa2HF>\x9f\xccz\x8d\x05\x05t\xbaC\xa3rN\xfc\xd6\x05\xf1\xf4\x8e:t\xa5\x87nP\xd4i\x11I\xee\xfd\xf7\x1a<U\xce\x96\x93]g\\1t4\xe6\xe4[s[r"\'\xc1h\x1dY\xb2\xdc}\xc5\xe3\xe3n=\xfd\xc8tI\x0b\x96\xb6\xef\xff^\xd0b\xb6\x8b\x0e\xcc\xa1\xbb\xc7e\xbb\xdc\x17>\xe9O\xa2\x0b\x1f\xa5\xa6\xbe\xd2\x87v\xd4~\xc5\r\x86kR\xbd\xc5@\xd5\xd3\x08D\xf5\x9ciWo\t@t\x92C\xdcb\xae\xfc\xc1W\x1dY\xba\xa8\x86{&kj\xa8\x93\xbc\x92\xc3k\xfd\xca2\x94\x94\xad\xd7\xbc\x8b<Ll\x01\x06\x06?=\x18\xfc\xc7\xaf\xa3u\xca\xd5\xce3r\xd9$\xb2\xe2Z\x00\x06h\xd1\x9d\x9aR\x15#\xb4\xca_\xda\x03\xd2\xfe<\x12\x87\x9e\xcay\x89\xa5F\t\x17i]M\xc5t\xf5(\xfa\xd7\xb6\xcb\xd8\x15gC\x84\x89H\x01\xe4\xcc\x93\xce\xc6\xb6\xa5\xb9\xd0\x1c\xb8\xfd\x95\xa9\xc7\x85\x8cD\xb1F%C,\x8e\xb1\xb3P\xcab\xb0\xc3\xf22\x0c\x9e\xd7\xf1\x7f\xc1\xa1\x82\xcb\xc5z\xf3z\x14Ew\xa7\xa8FY\x1b\xa1,\xbb\x80\xfdZ\xf6\x03\xd0\xce^\xd9\x8a\xeaX\xee\xec\x9f&\x9el9\x8c\x1d+\x90y\xd8a\xdbf\x81\xd3\xbe\x84e\x1fK\x16\xe0sx,\x99\xcf%\xbe)PEq\x01>C\x96\xd7\x05\xcd\xb1H\x02\x83\xd0\xf64\'\x8a\\\x12\xd5\x84s<\x13\xe0cFF\xd0\x04\x16~\xbe\x900\xfb\xfc\x17\xc0^yR6\xc0kd#\xe6L\x9f\x95\x10u\xdc\xe5\x93\xb4_l\xde\xe2\xf5\x14\xdc\xe8iV\xbc\x11\x1b\xb9\xf4\x8b\xea\xc3v\xf9oP\xdeLw-]-\xcf#\x06\x11:+\xca\xf3\x05tx\xb9\xe3\xc6\x13\xbee\xa91\x97Z\x82\xa7\x99\xfcF\xfe\xa7`\xe7V\xbe\xc3\x11\x8dV\xf9F\xf3i\xcb\xab\xe3\x1fz\xa9\xda\x1f\xda\x16\xcf^*}\xfb\x97\xdaN)@\x89\xcb\xca\xc6\xab\x10\xc7\x0f\xa83o?Ay\xc2\xba\x13\x81\x8a\xdd\xdaF(\xf4\xe0P\xb1M\xae\xf3\xf7\x82\x9a\x1f\xee\xb5\x8bm\x9d\xe9\xcd\xb9(,\x820\x99\x8fj\xb3e~\xd4\x17\x93\xab\x91\xa0\x1a\x17\xf5\x11\xf3\xc5\xdc\xdb\xd3\xbc\x1d\xb3\xa9sV?a\x13\xa8\xde\x9a_7\x07\x9a\x13\xa7DA\x93,\x83\xd5\xb5\xeb\x9c\xeb,\x929}d\xfa\xf4\xf5\xdbO\xddH\x8b\xbd\xf8\xabj@F\x0b\xeb\xf2\xceL\x06\xff\x13\xeb%\xca?|\x86c\x8e28\x82\x80\x1e\x04#\xaf\x18\x07\xc6&\x1c\x9eZ\xb7\xac\x15\x7f\xeb\xb1\x02.`\x84\xdb\xb4\x1ca\xd0\x9a\x04\x1f\x87n+]\r\xe83[W\xcah7Xl\x0f+\xe1\x96\xefi\xfaf\xaf\ni\x8f{\x8e\xac\xd5\x98\xe7\xd5m\xbc\xe7y\x0b(\x0fB\x08\x9f!2n\x0f\x19\xb5\xcdi6r\xf1@zQ\\\x83\x0c\x00`l\x16=\xdc\xe9hb\x12P\xe1\x8bL\x08\xf2\x15\xab\x9bz\x1eg\xf1\x15\x9d\xe7\xa8\x95T8\xa7\xf4\xb5\xcb\xf4hOA\xabna%H{\x14\xe1\xa0\x01\xeb$\xd9\xb5y\xc1\x10\x97\xdb\xc5\xa9\xdej7\xca\xa7h@;V\xd37\x97\xe5j\x87\x14\x8f\xbd\x8eE\x0f\xb4\x80S\xe9\xb2\xd1\x9cN1\xdeE\x0c\x02\xa8\x86\t\xf2\x02\x93L\x841\xcf\xf2\x18\xd6u\x05\x97\xd8\xf1\xb4w\x80\x87\xb5\xb6\xe5\xf8>\xc4\xfd\x82\xc9\x1a\xc2),\xafa\xa4\xba2\x9d`N\x9d\xe5\xd89\xd3\xb0\x7fx\x14\x1d{e\x08DsG\xe7n\x88\xafY\xf4\x05G76\xee|\x8eS\xbb\x81\x8d\xc4\x98\xe1\xd68o\x85E\xcau\xe1\x12CX\xa67VI|\xbd;\xa0@q\x85U$l\x19\x8a\xff<\xc8-i\xebY\xb989H\x14\xa3)\x010\x8c\xdb\xf8\x15\x9f\t\xc5\xd9gb&\x90|\xd4T]\xbf\x17^\x14\x86\xb3\xd5\xd7\x0b\xfcmZ_:$\x159\x07\x84\x1a/\x95C\x18\x8d\xf8\xdd]\xc9|\xc3\xc7\x0e\xef\xbcQ\x86\xbd"Q\xe7q\x86\x0cb\x0f\xa1\xfb-\xd4\x9a/\x98\x81\xfax\xc3D\x0cv\xfe\xe2Kz\xf6\x1fV\x10m\x91@1\x13\xf5)\xbe\xed\xd4\xa5\xe3~\x92\xd2D\xd3\xcf\xa8\x93\xc8\x9e\xa1\xa1\xb6\x03xr\xa7\xe0\xb9\xf2y!\xbd\x8a\xfe\xa1q\x0c\xa2\x18}df\xf0\x8a0\xc5f\xacJ\x02\xd4H\x96\xad\x04\\l\x10\x97\xd9lh\xf5\x0f\x9c\xe0\xe9\xe2\xe0\xbfb\x01!b\xd5\x00&\xb9\'\xe2\xfb\x06\x80}\xcd\xfb\x95X\xc5\x1c\x80\x91\xd2\x9dU\x16\x1a\x84\x89Y\xd9\x9au\x0b\xfawe&T\x87\x98\xa17+/\x9fs\xfeLB\xa3iD_l\xf7\xec\xde\xdd\x88\xe2\x837\x8d\x10Y\xa31jW\x98\xe1\xa8\xb6R\xe5p\xd4\x8f\x88\xe8|\xbb?\x93\xd0\x87y\xaa\x92\x1fF\x84\xf0\xbc\xfa(TXLh\xc8\xc4\x89\x8e\xe2#\xb9\x81e\xd1\xb0\x19\xb8\xc0\xec\x9c\xe7y\t\xf27\xe8n\xbf\xe6\xe1\xc7\x1c\x0e\xa3\xd8<R\x85\x86-\xbb\xe3\xd7\x01\xb2>yL\xce\xc4Y|\x83\x91e\xc7\xcb\xe7\x94\xac\x90a~\x1a\xd6\xa0a\xc0dMK\x0e\x1e\xadG\xaf\xedZ\xee\x13\'z0\x8fv\xc5g[\x12s]\xa5\xbe\x1e\x04\x10\x9b\x96\xc2\xcc\nN&v\xd4Jp\xb0<\x93\\"Q\x0e\xd8\x80]\xdd\xee.\xd9\xa4\xef\xc9R\xbf\xb0`>ux\x01Mpu\xd3\x9d\xbc[\xb3\xc5@\x86*\xfdhO\x1en\xae5fP\xb9\xdaG\xeb\xd6Yoe\xbb\x1c\xb5q\xca\x01EH\xd9"\xdf\t0/F\xeb.C=D\xc7\x93\xfc\xb2\xb4\xf0P\xab\xb5\x02\x00\xc1\x98p\x8f\xd0\xff\x03/E\xbc\x04\xe7\xd3\xdb\xc2~i\xa6\x05\xf7\x14\x02Z\xf3\xec\xea\xc9\x1f\xc7-\x0b\t\xcb\xaaz\xd4\x95k\xa7\xf6\xd2}3c#\x95\xc6\xea\xf5n\xe2}!KQ\x08\xdc\x7f\xe2\xc8\x00\xb4\xaftg8\x17=N:\xbe^\x7f.\xdd\x9b\x05\x87ic\x90_\x9d\x92\x96\xaa&\xd1\xf8b\r\xef\x11\xd4\r\xfb\xb3\xcd/F\x87\xaa\xc2\x1e\xfeq\xcf\x14\x17\xc7\xdf1\x92\xaeF\x0c\x8a(\xab}\xd9o\x97\xa6\x9d\xda(\xcd\xfaskjw\xfer`V\x1a\xac\x08$t\x1c\xa2\xd3\xbe\xfc\x9eN\x9a\xc26\xeaQ\xe0\x9e"?\xf3\x1b\x07\xe4\n\xf5@3\x06\x93\xf8@\x0e^\xe8J6\xd6\x8bq\x08e{L\xed\r\xb8\xda\xd9A\x04l-\x06g\xdf\xbe\xe1"\xd8\'\xd5\xd3\x0e_4Ia\xfc\xa2\xf5o8\xb2\xbd\x05\x96|\xf2mrD\x89\xfe\x9e\ntq@8/\xbe-\x1ebW\x10\xfa\xe0\xce)[jU\xe6\xae\xa1\x9aO\x0cl\xc4\r7\t\x99l\x92Q\xa6\x02\x95\xe6\xd9F\x1aepo\xa6I\xda\x1fF(\x18\xcbM\x0c\x82\xe3\xe1Uw\xfd\x9e\x16^\xec>8q\x8b\x9a\x18\xef&\x9e\n\xdb\xf3\xb0\xde\xbb%\x16\xed\x07\xe1\x7f\xf1\x1b\xe9=\xdfH\x91-\xa7\x9d \x92\xd2\xfa\xb9\xc8\xcc3\xd9\x07\x91P\xd8\x19[\x14\xaf6\xbf\x01\xaers\xf7\x1aM\xbd$]\xbc\x8d\xe01\x95>\xb5\x08\xdfqK\xd9\xeaB\xd0i\x01\x7fq\x85o\xe8^X!\xbc\t\xa4Za\xe9\x84\xa9\x14\x88a\xa9\'\xfeE\xfeTC\xd8\xc7"/\xcc\xab\xb3G{R\xcf+\xf5)\xdaI\xb2q\x11\x05\xb9\xc0h\xce\x91b:\xe8\xacbP\xf5\xea7\xebb~\xd1\xab\xe4\x10\x03\xdc\xc2\x9b\xd6\x83\xede\nr3\x02\xf7\x0e\xc2)\xdf ~d\x02d\xc1\x88\x8e\xc9`\xcf9\xa8\xfc>\x9di\x92\xbc,\x88t\x8da\x00S\xa6\x00FJ\xb3GG\xa8C\xfb\xd1\xc2\x7f]\xa0eC\r|\xda\xac3\xa63w\xc3\x94\x15\x03\xe0\xe3/q ;$e\xd8M2\xa5\x8f\xec\x8f\xa1\xb2<\r1\x8b\xb9\x94\xa0d~\x04\xc5\x85\xc3(b \xb2H\xae\xa46\x86?M6R9\xd5\x96:\x8d\x8e^1\xa8K\xdcw\x0c\x1d-Nv4<\x93\x82\xbfI\xdf\xbe\xea\x1bb\xf2/\xaf\xfb\xe9\xb9\x06\xde\x88\xab\\G!\x110b\\\xc6\x06X7_\x96i\xf3\x85;9j\x1dP\'Q\xf6#\xcc\xec\xee\x8b\xf9\xea\xe9\x08G\x08\xc6ZO:RJ\x0f*\xd1\x10\xdd\x87\x93@z\x83\xe5\xb9\x01AS\x05 6\xa9\xeb\xf7\x87\xba\xa8 \xb0f\x1bMP\x0c\xee\xa6\xce=G7\x1f\xb6\x90L&\x14\x0e\xcb\xb3I:Fw\x0e\'\xc5\x89\x9a\x83\xa5\xe7_\xc49 e\xb5^\xb6\xd3\xaa\x8a=w\xbc\x8eZw\x97\xb3\x9c\x92\xd3\xda\x89\x164\xf7\xd070\xb4\xd5?al,/\xe4\xb3\x10\x9c\x1eH\xec\xa7\xf1\x88\xabW\x10|%D\xb9>\xe3\x1a\x0e\x9b\x83\xf4\xfa\x8645\xba#T\xa49\x10\xcc<\xb3]\xde`v\xb8>g\x9aU\x9a\x91\x98\xeey\x9a\x9f\xd2g\x86'
+2018-02-08 15:30:36 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+2018-02-08 15:30:36 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x17\x03\x03\x01\xe1\x00\x00\x00\x00\x00\x00\x00\x03\xad\x10\x02qwu|F\x93b\x95\xf3\xb2:\xa9\x03\x03\xa72\x81aX\xf0LT\xd8\xfc\x06\xbd6bC\x13\xd7\xf3\xd5\x1aX\xc5\\\xc3\xe7\xfa\xba*M\x89\\\xc0\xaeA\rn\x15U%a\x7f?}=\x1c\xa6\xb3\xee\x8c\xc4j\xb59\x80\x8f\xc2\xc8\xa31%`^y\x1c\xf1\xbc\x97R\xb5>\xd6+\xd6\xc2\nP\x96g\xc7\x84\x07\x18\x10v5\x95\xc6\xe6\x86C\x9eT\x14\xe7v^\x9eH\x19\xf42gl:\x92\tb\xe9\xbfr\xbe]\nFh\xcd\xd3~\xae\x18\xc6\xc7\x1e5\xe3\x15\xe1\x81\x9a\x01\x19:Qq\x98j\xccL\x00\xa6P\xd5\n\x01\x96\x92eOAm(*\xdb9B\'\xc7p\x9e\x87\x02\x1e\xfe\xbf\x91!\xfe\xf7\xc5\xc57\x1b\x05\xd9\xd1\xd87\xb6\xf7\xf4c~\xfc\xdf\xc7-\x116\xce\xdc\xd9\xb7\x04\x85[\x89IX\x84\xb6&\xc1\xd3\xab\xdd\x07\x1a\x82h1\x9b\xfde\x03Y1C\x00VE\xbf\xd3r\xf7)b7\xa6<EA\xbe_wu!\xa69#\xb1\xed\x89KC\xfa\xf6\xecT7i\x113\xcau\xca\xbb\x81\xaa\xe9\xaaZ\x1c\xe7\x8f\x86\xf67+\x848\xddU\xbd\xaf\xce\t\x8a\xa7\xf2?\x04\x10\xf9W\x9a+AGq+\x1a\xbe\xe8\x94\x7f\x04\xb0\xc3`\xd9=\xce\xb3\xf71y\xceb\x8d\x93\xb5h\xfc|\x9a}\xf3T\xfb\xe2\x0f\x82V]\x14\xfd\xab\xcb\xa4A=\x87:\xb9\x95\x12WkQ\xb0B^c&\xb0\x10\xee\x90D\xf7g\x81\xa7D\xfe\xe5\xb8W\xe7\xd0HE\xae\xb5F\xf9\xf38\x81\x7f_%\x98\x13\xe2/\xb4\xf3\xf7\xf8\xc3\x13\x9d\xf4\xc5\xdd\x98/7\x17\xeb\n\xd4N\x9f\xbd\x9fN\x1e\xa7+\xd4\xdf\x1e\x9ef.\x05\xa4\xa0a\x9d\xe5k+\xf3\xb4\x9da\xd8\xd2\xb4\x85\xca\xad\xb4\n\x0f\xeb9\xc0\xb5\xba:\xa7;\xd4\xf5d\xb6/\x08&:\xaf\xd8q9\x0f1m7x\x9d\xab\x8a\x17\x03\x03\x01\xc1\x00\x00\x00\x00\x00\x00\x00\x04\xc8\x13\x1b\x93\xec\x9bz\xb1\x1b\xf4\xfbO\x0eU\xcbp\x19\xb4\xb9*\xca%\xdb\xfe\xbd4\xdd\xc1\x18c \xbd\x1c\\\xae\x9bv\x15\x193\xb6\xc3\xf7&$oAR\xae\x90\xa9\\;>\xec\x94\x1d\x06\x18\x05\x02\xdd\xe9\x8b\xdb\xf6\xf95\xcb\n\x04\xb6\xb9f]a\xfc%\xb3\xd5\xef\x97\x16B\x85\x15\xd2J\xcb\x9b\xd5\xf6G#5\xc5\x10u\xc7\xc8\xae\x9a\xce\x06\xff\xe5\x87"!\xf6>\xcb\xb6\x87\xab\x00I]4;\xca\xfaB\xc2=\x7f\xed\x07\xd9\x05\xb5\x1c\x9aI$\xc0z\x144\x0f\xe9l\x161vx\x0b-3\xa1\xdd,K;&\xf2\x1fK\xadi"\x17\xd9nT|sp\xbb\x94\x9d\xfc\x89\x80=\x1b\x8b>\xdcs}\x95\x84\xdce\xd7\xc4\xd7EWa,\x90}\x9b\xdb\xcc*.W[\x18\xcc\nx\x953\xf0\x8f\xce\x13B\xa3)/\x85\xd1k\xbc\xb5\xf4\xa1\x19\x15%\x80\xe6i+Bl\x1an9\xb94\x83\x8c~\xaf\xea\xa6IW!\x11u-\x9c\x13}\x96sd2\xd8\x86\x83=\xcf\xb4\xf8\xd1\x1bK\xce\'5<\xc7\x1c\x01$\xf3\xb0\xb6\xa6_\t\xcaR\x84\xf6\x9d@^\x0c:\x7fW\x1fU\xf7\xc5h\x08)N\x14\r4\x8b\xf5\x99\x9c\xffr\x93\xc4,\xa8;z@\xc5\xd1\xef\x10\x1d\x9e\xea\xb6\xf6\xe7F\xfa+q/3\xa5\xdf2\xa7\xae\xf2\x11\xa6\xb9\x8cu\x01\xf4\x10\xef\x19\xcbj\x85\x10\xb2\xa5\x19;d\x8e\x87\xe8\x04x$\x05<\xde\xff\xc0\xb3\xa1\x85\xd3\x1d.\x0fZ\x07\xf1\xa5OW\x82y\xe21iO_\xde\xa7\xa8\x05=\xae\xde\xc5\xe1\xce$\x0c\xdd\r\xf6\xeb3\xff-\xefa\x1a\xc7\xc8J\x86\xa0\x97\x16bew"X\xc1\x9fMX\xad\xfb\xcc\x02\xe1jb\xc6\xd6\xa6\xadT\x19c\x96\xb2\x80'
+2018-02-08 15:30:36 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+2018-02-08 15:30:36 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+2018-02-08 15:30:36 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x17\x03\x03\x01\xe1\x00\x00\x00\x00\x00\x00\x00\x05\x961\x8f\x16\xd33\xb1qDA\xd1Ks\xb3\x8d2G0\x8du,\xfb\t\x12j\xfb8\xf5\xf2\x8e\x18t[2\x1e\xb8t)\xe3\xc1\xf8\xb0\x94k\x00\x10\xbf\xf7\xed\\\xfevz\xe7\x14^)\xe28i\x12\r\xc3_\xf7\xa1[\xd3\x86\xdcG\xa1\xf6\xe3\xc5\xber\x80x5fS\xa0\xd3\x96\xf2u:\xfa{\x08\x95\xa8\xe4M\xa8\x1e|\x92S\xcb(\xc3#K:V9>b\xb5g\xda\x80\x7fm\xce\xf5A\xbe\xedw\x15|\xde\xaf\xadc\xad2\x00\xc9\x9e\xef"\x06\x11&jj\xbc/ "\xcda\xd4Ma`l\x9b\x9dU\xf2]\rfp\xd7\xa6\xa0m\x8e\xceOq\xca8\x9e\xd063\x1c^\x14\xb2qU\xadE\xea\x0bW\x17(\xce8\x86\xbbwJ&\x11o.\x82_&\xe0Q7\x0c\xd9\x91 \n\xb2\xfb-\xde\xbe\x06\x8b\xe5L\x1f\xea\xdd\xee<\x94XW\xa6O:h\x1a\x15z\x1fF2\x0b\xc7\xe6\xe2\x92C.\x1b\x10\x94\x8fCi\xbew\xa6z\x81\xf8n\x89y+\x02-)i\xe5\xeab\x98o\xea\xee\xd7g\x08\xf4\xb2\xc3j\t-\x1c\xdf\x0c\xa8\xf0\x14\xf3\x87\x185\x0fA\xc8*\xd8J\xb2\xcb\xf6c\x883\xb4\x01\xf9\tD\x02\'\xbb\xab\xbaG\xb5N\x9a\xf6~Je\xa9\xb4bj\x10qSE\xf2\xb5-\xfc\x97Nt\xf0\x9c2\xcbi\x81HG\tb\x84$\xa8\x9ak)\x05WRc6\xe0\x82$\xdc\x86\xf5\x9eF\xfc/\x93\x898\xef\xc52`\xa9mV\xedP\x92\xbf&\x9a783\xf9D\xea\xfb\xd3\xae\x82L\xebi\x01\xc6\xa9\xe1\x8d{\x95&\x03\xce\x03g\xa7dU\xd3gh&\xf8\x9a\xd4\r\x05\xef$\xe1[\xeb\xcc\xac\xe5\xbeVf\xe2\xa3\n.\x02\xce\xea[2\t}\xf1n_\xba7b\x8a\x06\x89\xd8\xd0\xc6\xe3\xd9\x88\xa9\xe4\xc3\xf5\xc3W\xccd\xb8o\xfcg/\x19\xb1F\xca\x0c\x02\xc6\x17\x03\x03\x01\xc6\x00\x00\x00\x00\x00\x00\x00\x06\xba\xb8\x04\xf2\xbdT\x1f\xf5\x82\x91\x13c7\xb3\xf3\x82\xf8\x0c\'\xfe\xc1\xff\x95\x17\xdb\xd4\x0f\x8c\xe2]X\xd3\x1a\x92\x07u\xfb\xee\xccY\xb510q\x00Y\xae\x17/S\xff\xd4\x94\x14\tm#fWa\xa2\xe4G\x95<\x99\x99\xe5\x93\xf8N\xd3\xfb\x1b\xe34\xb6\x99D\x89\xd1{\x19u\x9d7\xdcq\xfa1\xc7\x83e\xb6\xcf\xb0M|,\x82\x8c\xb2\xdf\xb1\x14\xac\xa1\xf9Lo)\x02x\x10\x9bWd\xff\xde\xdd\xe2\xc2U\x00_\x9a\x16y\x0cY\x95\x97\xb0/\x82v\x91[\xb4\xf4\xe4\x86\x83\x0c\x80\xe3\xb4h\x8dM\xba\xfdb\x98\xf8\xbf\xb8\x8a\xb4\xecKZ\xe2\x89\xac\xde{\xf2\xbb\xbe\x1e\x15\x1f\xf3\x94\xa4{\x91\xa8:\xe2\xf2\xe49\xe8\xd4\xcc\x8b\xbe\xf0X\xf2\x0c\x16\xdcz\xd5m\x0f\xa3\xf4"\x83\xf2+P#k\xb2\x99\ru\x8c\xaa.\x8c\x7f\xd5\x01\xa4\xb3\x0f\xcc+\x9d\xac\xf1\x82]\x99aawd\x95]\x90w\xe5rw\xab\xb8\x1c\xbb\xaeT\xa7\xdeo_y.\x0f\xce\x14\xe5\xa89\x15\x15\x04\x8a\x19V\x06\xb1W\xaf\x0f\xc6\xe9c\xc9\x14}S\x85p\x84\xa8\xd9\xe0uD\xfd\x08\x04D=\x04\xf6-q\xd5\xc0\xa4\xd6w\x01J\x13X\xf8#\xce\xe9Xs\x1f\x05\xd4\x81\xfa\xfdB\xa3"k\xc5\x01\xd2bL9\xa98\xbb\xa3j\x97o\xf4\x00\x1a\xad\x89\xb9v\xb1\x84\x9d\xcfpQ\xc8j.\xe2\xa6%\xa3K8\xa0d\xb5\x9b7T}\xbc\xd7\x1b\x9e9(oak\x15~,\x12u\x00T#\xf9\x14\x01\xfc5\xee\x15@*.\xcf\xa7\xfft\xa8\x0e\x85\xf8\xe2\xfa\xaf\x14\xacN3\x06a\xf6i\x1c\xb3y\x8b\x19[\x0e\xc7\x14A\x88\xf9\x96\xba\xf7\xf6c\xc9\x9b\x07\x16E\xc8\xb5Od\xbe~\x06\x0f\xe8\xff\x9em|hh\xd0|'
+2018-02-08 15:30:36 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+2018-02-08 15:31:35 DEBUG    accept
+2018-02-08 15:31:35 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:31:35 INFO     TCP Handler event: sock:13, event:1
+sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:31:35 INFO     TCP Handler event: sock:13, event:1
+sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x0cxp.apple.com\x01\xbb'
+data: b'\x03\x0cxp.apple.com\x01\xbb'
+addrtype: 3
+data[1]: 12
+2018-02-08 15:31:35 INFO     connecting xp.apple.com:443 from 127.0.0.1:51942
+2018-02-08 15:31:35 INFO     TCP Handler event: sock:13, event:1
+sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\xed0D\x8e\xef\xee\x00\xd5y\xdd\x9e@\x8dV[\xa8\x13\x1b\x10a\xb8C\xe6\x10\xa8C\xec\x8d\\"\xcc- A\xf6\x91\xd1o\xd0Ijr\x8d\x9a\xa9\xbb\xb2\x90\t&X\x0b%\xa3p\xdc\xde\xe3\xb77\xf1\x95\x81q\x1d\x00(\xc0,\xc0+\xc0$\xc0#\xc0\n\xc0\t\xcc\xa9\xc00\xc0/\xc0(\xc0\'\xc0\x14\xc0\x13\xcc\xa8\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x01\x00\x01\x8b\xff\x01\x00\x01\x00\x00\x00\x00\x11\x00\x0f\x00\x00\x0cxp.apple.com\x00\x17\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x000\x00.\x02h2\x05h2-16\x05h2-15\x05h2-14\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18\x00\x15\x00\xfa\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2018-02-08 15:31:35 INFO     TCP Handler event: sock:14, event:4
+sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x15\x03\x03\x00\x1a\x00\x00\x00\x00\x00\x00\x00\x07\xe7]\x14\xe0D\xdf\xed\x0c\x06\xcfz\xc3\x8f\xa4\xd2@\x1e\x1d'
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e3c8>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51938)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51939), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51938)
+self._remote_address: ('apidata.googleusercontent.com', 443)
+=======================END===========================
+_on_local_read=========data: b''
+2018-02-08 15:31:36 DEBUG    destroy: apidata.googleusercontent.com:443
+2018-02-08 15:31:36 DEBUG    destroying remote
+2018-02-08 15:31:36 DEBUG    destroying local
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:14, event:1
+sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:14, event:1
+sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:13, event:1
+sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b"\x16\x03\x03\x01\x06\x10\x00\x01\x02\x01\x00\\\xf9\xedT\xc3L\x16\xbf\x1a\\ ZV\x8f`\xfc0\xdc\xde\xdb\x87^\x18G\x01\xb3~\xc3\xbe\xb6F\x0fGn]\x8e\xd6\xb1\x0f\x8a\x8e==b\x12\x0b\xf6HI\xf6f\x89\xfa\x9c\xca\xee\xdd\xcd\xe8\xfd\x1a\xf7\xd0\xf7\xff3\x88T\xea\xc4\x9e]\xd9q\x91\\\xce\xb0\xa6\xce\xea \xce\xb5\xf7w\xc8~\x00\xb1\xc5q\xe4\xf5*\x87\x18\xc1Q\xe5\\\xaf\xec_\xcb\xd4\xf7\x89$\xf1o\x0fn\xbc\xf2'\x87\xb4\xf4\x08\xf5,\xferP\xe5Lf\xe8\xf6\x868\x02\xfe\xe7\x94:N\x19\xec9\x14Lm:\xba\xbd\xbf\xe4\xfc\x84p#\xeb\xef\xd9%\xdc\x8dz\xee\\\xc5Y\xc5\xf0d\xe2M1\xb8kaB\xef\xdf\xc0\xfe.qo\xee9EEO\x02Oy\x8f\x90\xf8\xbf\xf3];OHm\xd2\x0e\x1f\x0e\xffy\x14\x0c\xa3l\xc9\xfd\xea\xc2\x12I\xfc\x86'\xbf\x83\x14\xa4t\xc2\xd9/\x10T\xb2\xff9P\xf3vXK\xf5\x1e^\xcd9e}\x03\x8c/jF\xab\x81\xcd\x0b\xc5uT\xe3\x14\x03\x03\x00\x01\x01\x16\x03\x03\x00(\x00\x00\x00\x00\x00\x00\x00\x00<\xdc}\xf6\x92\xfd\x80\xcejL\x1a\x1e\x0c\x83\xabni\xd32\xc1\xca\xf4o}\xdb\xa8\x87\xc7\x9bf\x8cr"
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:14, event:1
+sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:13, event:1
+sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x17\x03\x03\x03\xb4\x00\x00\x00\x00\x00\x00\x00\x01{\x06\xf4\xd6\xe9&\xa3\xa7\xb1\x0b\xfb)*\xbf\x0b\xda-wc\x9f\n\xfa\x94\xe9^%]\xb7\xc7\xa1\xf9\xe2\x12I\xa3\xe7\xe6\xa2\xbb\xf9\x91\x0f2\xd2\xba\xeen\x0fx\x1e\xa5\xde\xc6\x8a\xd5\x86\x92=uv\x7f\x9f\xea\xc8UG\xd0;\n\xa4\xa0k\x01Oi+\xc3\x82\x94\xe1)\xb9 \xd5.N\xc3XPR\xbd\xf6\x8b\xec\xa2"\xbf\t8\xf8-1<p\xeeC\x1a\xb8\x97R\xd3\xf0\xe6\xec-!3\xaa\'w\xc7\xc5Zs\xd8V+<\x81\x93\xf6\x18T3\x86>:W\xba\xa9\x04\xeb>\xd2\x07_\x8al\x97\xd5\r<\xcdO\x89\x8c\xff\x14\xb3%c\xe8\xd5\xa0\x1a\x81\xd2\xbdU\x95\x84\xb2\x8a\x81\xc2\x1f\xb4%\xfa}K4\xaaM`\t\xc3\x04\xd22m\xe9\xb4\xfe\x8a\xa6\xbd\x92].`$\x12\xb3=\x1b\xfd\xbf>S\xf5\xb5P3\xcc[\xc6j(-\xf3=\xfb\xcf\xa5\xa6\x03P\x1d0\xc5\x89X\xdcb=\'\xb6\xe0\x1a\xf9\xb6\xeb3=\x1eP(\x8es\x9a\x9bH\xe6\xc3\xa7\xcf\x8b\x00@\xa8\x16\x80\x16\x7f\xf1^\xce\xa8_\r\xe2\xc2\x82\xfa]\xa3\xd6LC\x12R\xb0\xa2,T\xfb\x18\xc6\xfd\xff\x179\xa0\x04\xd1\xb2\xca\xee\xdb\x12\xea\xdd\xf1_g\xce\xca\xb2\x88\x9b\x91ja\xf7\xe3Is\x97\r\xd6\xa91\x07\xec\xedL\xa9o`\x12\xa3?\xe1\xcf8\x87\x156\x02P\x04\xbf\x8a\x12\x8b\xc4\xa5<\x17\xa8\x1c\x03-\xdd\x8dA\x8e\xd6\xea=^\x96\x91\x87\xa7K\xca\x8b\x15k\xc3\xe5#\xfa\xa8\xe2Z^\x7f\xc4r\x1b\xa1.\x12\'\xe1\xb1\xb9Hu\xd0\xac\x8d3\x96[T!$\xdc\xb4*\x87@\xed\x19\xecIb\xd5\xe0T\xba]\x86\x9fg\xb9"%#\x9b\xcc\x82z\x98V\xb7H\xc5\xf4m\xc7\xd8\x93o5p\xe1\x010\xee\x1d\xe9\x8c\x90\x99\xa0\xf3\xb30\x10\xa5\x91\t\xfa\xa9u\x0f\x02\xc8\x84W\xd8\xc9\x83\x822cs\xa0\xd2\x02\xc1\r\x04D\xc2\xef\xc7\xbf\x08\x10\x8a\xca\xbe\xf9,\xbeK\xbd\xb3\xb4\x16\x03\xe6R&\x02X\x9b\xa3b\xbd\x00\x1ex\xc5\xbc\x84\x87l?)\x82\xdc\x00\xdd%\xeb\x16c\xfdK>\xf9\xb4\xec\x02\x0c\xe94\x94\xb7\xe4r~k\xeex8\x03x\xae\xb6t+7\x03\x96\xde#\xc5\x08\x81T\xcd\xb0\xf8\x1e\x8a\xea\xc16\x8c\xd4\x7fdR\xf1\x94\x9c\xd6\x0cX\xfd\x16\x08\xc2\xd1\xfc\x1f\xcd\x83\xb706^\xe4\x90\xe4\xe1\x83\xa2\xd4\x8f;tz\xbb\x13f\x92\x00\xadc\xe5s\xc2\xdf\x00\xa4\x1c\xf6B\x7f\xe7\xdf\xacV\x0f\x82\xa0_\x19\xe1\x97\xd9\xcd\xf4>\xdc\x8e\xd7s)\x00*.{\x03\x07\xfcj6x&?\xfb\x0c\xa0\xd8\xa1\xa0\xe8g\xf9\xbb7&\xa3j\xb9\xec\xd9\x8a\xf0a\x88\xd3b\xbb\xa3\xcc<_\xff\xe4\xbe7\x1e\xf1\xbf\xcd`\xff\xca\xf8*B^H\x8a\x95@k\x8cq\xc6\xc3\xd1w\x9bC\xb6\x13\xa6\x94IkCh\x0e\xff\x96\xefM?xG\xff\xc2\xf3\xc9\xd1+\x19/$%B\x11/\x85\xac-KR\x0b\xae`;\xef{\xccu\x9b\xcblLQ\xe0*\xf8\xf6\xfd\x85\x91\xbb}me\xa9;\xaa\x02YkQi\xb8\xe9\x07\xa5X?\xb9=\x1e\x15\n\xdf\x96\xa2\xb0\xa6\x1eK\x06w\x8af\xbb\xabu\xfb2\xf3\xbd\xb8%~ K\x99\x1fz\xc4E\x9d\xabR\xa6\x0e\xec\xdb=mI\x95\xcc\x14\x91\x99\xd3\xe2r\xd0B,\x12"V\xccV\x89\xf356\x04\xe9\x1cs\x17w\xda\xecj\xed\n\xd4\x9a\xdf\x87k1nT1\x07-\x9e\xa6H\x11\xb5|@Q\xb2K\x85\xd3j\x94\x95:\xc6lBOZ\x05\x15\xeb\xa3\xce,$\xb8\xd5\x11\xd4E\x1c\x9a6\xa3\xf8\xaa\xdf&\xccF\x99t%\x1c\x0f|\xf6\r]1x\xca\x0f\x81\xd0=\x80c\xb2\x14I\x1bd\xbf\x9b\xa9\xac\x13P\xc0GA\xdeF'
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:14, event:1
+sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:12, event:1
+sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51941), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1066949b0>, 13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51940)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51941), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51940)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:31:36 DEBUG    destroy: mail.staff.sina.com.cn:443
+2018-02-08 15:31:36 DEBUG    destroying remote
+2018-02-08 15:31:36 DEBUG    destroying local
+2018-02-08 15:31:36 DEBUG    accept
+2018-02-08 15:31:36 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51944)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51944)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51944)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51944)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51944)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51944)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x16mail.staff.sina.com.cn\x01\xbb'
+data: b'\x03\x16mail.staff.sina.com.cn\x01\xbb'
+addrtype: 3
+data[1]: 22
+2018-02-08 15:31:36 INFO     connecting mail.staff.sina.com.cn:443 from 127.0.0.1:51944
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51944)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51944)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51945)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51944)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+_on_local_read=========data: b"\x16\x03\x01\x00\xf2\x01\x00\x00\xee\x03\x03\xfa\xdaxq\x144[\xff\xed\xb6\x93\xfb\xba\xfc\xc6aA\x18s&@e\xd7^`C\xaf\x89\xb4>\xb5\xb8\x00\x00.\xc0,\xc0+\xc0$\xc0#\xc0\n\xc0\t\xcc\xa9\xc00\xc0/\xc0(\xc0'\xc0\x14\xc0\x13\xcc\xa8\xc0\x08\xc0\x12\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x00\n\x01\x00\x00\x97\xff\x01\x00\x01\x00\x00\x00\x00\x1b\x00\x19\x00\x00\x16mail.staff.sina.com.cn\x00\x17\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x000\x00.\x02h2\x05h2-16\x05h2-15\x05h2-14\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18"
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:10, event:4
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51945), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51944)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51945), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51944)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:31:36 DEBUG    accept
+2018-02-08 15:31:36 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x13su.itunes.apple.com\x01\xbb'
+data: b'\x03\x13su.itunes.apple.com\x01\xbb'
+addrtype: 3
+data[1]: 19
+2018-02-08 15:31:36 INFO     connecting su.itunes.apple.com:443 from 127.0.0.1:51946
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b"\x16\x03\x01\x00\xd4\x01\x00\x00\xd0\x03\x03+\xfd09\xe6y\x1a8\xd4\xd1\x865pl%l\xdb\xe4\x80\xfbZ9\x06\x0bJ\x0c\xe4g\x04H\x0b@\x00\x00(\xc0,\xc0+\xc0$\xc0#\xc0\n\xc0\t\xcc\xa9\xc00\xc0/\xc0(\xc0'\xc0\x14\xc0\x13\xcc\xa8\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x01\x00\x00\x7f\xff\x01\x00\x01\x00\x00\x00\x00\x18\x00\x16\x00\x00\x13su.itunes.apple.com\x00\x17\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x00\x1b\x00\x19\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18"
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:12, event:4
+sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:12, event:1
+sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:12, event:1
+sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:12, event:1
+sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:36 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x16\x03\x03\x00F\x10\x00\x00BA\x04\xbf9\xf5\xf8\xd5\xd8\xf7\xa3\xf0n\x00s\xe4\xd9\x8c\xb2Q\xb9\x08\x19\xdcq\x937\xaeT\x9e\xe0r\xbe\xa5\xaa\x8d\x88X\xb1M\xdb\xff\xd8\xd7\x0ef\x8e\x9e\x8a\xc0b\xf7Z\xab\xba\x8dp\xb8eZ\xd9\x8dG\xe4\x9f\xd8\xdf\x14\x03\x03\x00\x01\x01\x16\x03\x03\x00(\x00\x00\x00\x00\x00\x00\x00\x00\x08$\x97\xbc\xaf\xa5\xbc~\x00\xa1$\xd6\xf0\xf6\xd4:\x1f\xff\xe2^\xb3\xc6\xd3\xcfC\x05h\x96\xc1e\x0c\xa4'
+2018-02-08 15:31:37 INFO     TCP Handler event: sock:12, event:1
+sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+2018-02-08 15:31:37 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x17\x03\x03\x05J\x00\x00\x00\x00\x00\x00\x00\x01\xf3T\x12!Y\x15\xd3\xd3\rEu\xe2:\xf3\xef\xbd\x00\xbe\x9f\t\x08=\x84\xd0\xed\xbdy\xa6\x03\xd7O\xf5\x8a4\x95S\xdd\x93F\xb2I\xabOw\xbc`\x1f\xc4\xfc=N\x0c\x08Y\xe2\xd8\x88\xcc\xa9\x16\xeb\xcb1\r\x05\x10\xd9\x16\xe3V\xd2\x05ZpG\x14I\'\x1e\xa0\xb9>\xf3\xab\x1d\xa1\xb6\xf7\xc4\xa9@J<4,ZwJ\xa1Q\xcd\x1d]|\'\xe2@\xb0\x13\x8d)\xc2\xf7\xe6\xcc\xa8\xd0W6\x14\xe1O\xceM\xe2\xc6\xd6!\xb7>\xc5x\n\xbe\xc2\x15\x8a,+\x9e\x86\xc9\xeb\x80\x05\x1d\xdf\xa8\xb7\xa3\x8b\xdd\x1f\xfdj}\n\x93)\xdd\xdfN%\xb14\x0b\xe0\xfe\xc8\x83\x05\x96y\xec\xbb\xe0k\xc2\xe9\xc5\x8dJ=|\xa8\x1f\xdc\xc5Z\xf7C!\xdbt2\x86\xfe\x98\xb0\xf9\xe7{\xd5\x1buV\xce\xd6~\x03\xf6\x9aj\xa7\xfd\xef\xf2\x0b\xbc\x04\x11\xbf\x98\x99J\x882\xbf\xc0N\xb99\x99\xcb(\xc2\x15\xa9\n\x14Mh^\'\x1b\xf8\xe2i\x05g%\xf4\xda5\x8c\xcb@\x97\xfc~^\x00A\xef\x0csP\xaa+n\xa5\xc4\xb0\xc9MM\xf7N\xa1\xb2\xd5E\xeb\x8b\xa6bM\xf3$\x00\x91;;w\x81\xbc\x03UZ\xcc\xfd\x80\xd9\xbd\x83\xa6Y\xe2l-un\xd87\xc0\x0c\xba+\xaf\xf43\xa2\xc8D\x19\xea\xe0\xe6\xfc](\x14\x99\xc1\x85\'\xeb\x8f3\xde\x1b\x94\xa5\'\xee\x8a\xf2\x83\x90\x8b\x8f\xee\xad\xac\xf22;d \x08\x88e\x1b\xe6-\xd0^A\x008o\xc4\x01\xbf\x17D\x9e\xb5\x98\xb7m\xa1f!\x7fKe\xcf\xef\xe0\x97?\xdfAT\xa7q\xa8\x91\x99\xb0\xa2~\xe5@\x13bN\xac\x1at\xf4c\xd7m\x868C@\x88\xb8i\xbd1G\xd4_\x1c\x9d\xc2\xb7\xc4t5\xf4\x0f\xfb\x8dW\x8eJ\x00!\xa9J2Z\xc5\xbd0\xe5^\x82\xd9\x94(\x0b\xeb\xbf\x9bM\xc0\x1cpN\xf6\xd9\xb4uK\x7f\nl\xecK\xb5\xd4\xd1\x01_\x8a\xc1M\xc9\x9f\xc3\xbc\x19\xf0\x1a\x8f\x86\x1c\xfe\x0fq\xe9\xd3\n\xbf\xf3\xec!.p\xe9w>\xcbj\x00\x90S61q\xderVz\xd2\x1a^_(7T[\xb4\xaa5\x14\xc9*\xcdH\x0c\xc6M\x84:\xc7B\xad\x17\xc4A\x92\xd1\x84g\xa1\xd6l\xeb\xa8}y\x06\x7f\x15)4\xab|$>\x07\xdc\xe7[\x95\x1a\xd5le\xf1\xd6\xf6u\x01\xeb}\xe8\x15t\xe4\ns\xcdV\xa0\xadC\x92\xc8y\xb7\xdb\xad\xc1\xb3\xbc\x8b\xb6\x17\x08.m:\x97|5\xad 4X\xc2\x1f+\x10\xb3\x7f\x8f\x99\xed\x8e\x8bD\x8a\xea\xb0\xe2\x1b\x05\xdb\x92\xac\xaez\xe1p\xe2\xed-\x13\xbfw\xad\x1e\x8b\xd1\x92\xd7\x8d]H\xa2U?g\xbaR\x02\xff\x15\xcdmr\x02M\xdf;\xe2\xe7\x96\xda(\xc1ua\xde\x17"\xd6\x94\x14\x88\xca\r\x98\xfd\xae\x1c\xf2\x88|\xf2=\x1ag|\xdfdOm\xdf\xde\x97\xed/\xb6\x92z\xe1`\x8c\xf9b\xc0\xac\xa9e#\x82A\r\x8c\xc3]\x8c\xe3*g%\xb4&N\xd9\xb4\x19\x80\xd5n;\xa9\xfa!\x80/5\xa6B\x0e\x10c|\'\xd6\x9b{t!V\xb7\x08\xc0?Y\xb8\x80\xcf\xe6\xea(pfY\xf7L\x1cAsGP\xa0\x96\xba,K\xd7\x8eGTd\x12\x91gS\xf0\xac\xa8e\x01\xd8\xd0*\x0e\x17\x95\x18\xce\xb7&\x8b\xad\x1d\xfe\xe4\xd1\xa8\t\x82\x0b\xee/X\x9c1\xd3\xdd\x9d\x01h%\xa82\xf4\x85\x94\xcb\xc3\xaa\x94H\x1c\xa2\xb2\x1f\xa5\xbbE\xf3+|H\xc3M\xac\x0c\xa2\x1c\xd9\xc1\xb5\x0e\x91U\xde\xde\x94\xcfJm\xd8\x0e\x80E\xd3d\xad\xb3\xb7\xdb\xee\xb1\xa6be\xc5\xa9\xdfPT>m>\xaa\xa53\x8bm\x94\xe9\x0e\xb4\x1ae\x98\xee\x8f\xc7a\x1e\xee\x01o\xe7_n\xe9\xc9\x98\xd4q\xcd\x10\x93bf\\T2\xa6\xcata<\xe7d\'<;\xf6I\xd3\xa3\x1f\x1f\xb8#6\x9d\xbc\xaer\xfc\xc4\x18\x872\x08x`i\x1a)\x08]\xe4\xde\x81p\xff\x89A\xb3\x85\x94\x10\x92\xa4\xa9\xe8y\xb9;\x16\x88\xd8\x96\xde\x01\x99\x1a\xc8\xee\x05\x81\x94(\x8f\xfd>\x01\x01\xe4<d\xd3[\x98\xb1\x99tV\xf5?\x11\xbd-\xd0\x08\x95Gv\xaaH\x96\xa2\\\x19q\x00\x83\x1c\xb52\r\x90\xe5F\x97\xf3]f\xbay;P\xcaK9C\x82H2\x87\xb83\x9c9?n.Y\xe8\xbd\x10[2\x00@\xa5\xc0O\x95\xec\xcf\n\x03;D\xc5]\xf2g\xc3\x86\xe1q*\x83\x07\x89Ww\xef\xc8\x03q\xf2\xa8:\x94Q\xc64\x1d3\x05\xbc\xcf\x03\x88j\xfb\x1e\x88\xb8&E\xf1wwa?\x13\xa0\xaa?\xb90\x7f\x87\xdf\xdcD\xb7\xf8\xe1\to3\x8a\xe6w\xc0e\xe7m\x0c9\xad\xdf\xc7\xc19\xe7[\xc4N7\xacj~x0G]/\xe7\xa1\xa9Z)\x9e\x8e\xd7\x8f\xd4\x8a\x12W\x12\xf0&L\x15\x16\xddy\xc9\xb884@y\x95\xc4^\xd2\xbc^O0z\x1e\xbd9y!\xa2\x9f\xab\xa0\x81\xa0&o\xd0`\x8f\xa9\xff+8\xd3z8\xba\xa98\xe8\x96\xf6\xf7W\xf8:\xfcy\xa6\x81\xe2@\x10\x93\'\xb3L\xb7\xd0\xde\x8f\x9a\xbd\x1b\xeavM\xf5\xdb\x03\xbb\xd3\x91\x10\x9du\x8e\xe5\x12\xa8&\xdd\xca,X@\xf9\x04:=\xc54p\r\x96\x06\xdc\'G.X\x9f\xb7\xf9\x1f[\xf4S\x9d\xd9j\x88Y\x11\xf6\xac~\xff\xa6:E\xf2R\x1e\x91*\xa0\x80o\x8e\x02\x15\xe8cr\xfe\xbb\x04\x06\xe9J\xfb#V=p\tL\xb1$\xc5\xf6\x17\x03\x03\x04d\x00\x00\x00\x00\x00\x00\x00\x02\x97\xbcN\x19\xc8\xcf\xd2J\x8b\x1f\xa6\xb5\xed\xfd\x01\x07\x98\x8c\x90\xc7\x9dD\xa9\xfcf\x13@\x06\r\x84\x80\x1f\x89\r\tf+\x86l\xa2\xfc\xe2\xbf\xe9h\xf65\x05f\x9au\xc2a\x0e\xf0q=\x02\xce\x18\x01I58d6\x84\xf05\xebr\xa4\xb0_\xe6\x91\xea4\xdb|M^\xdcuC\x98\xc7\xcd\xb1uT\xfd \xe7\x14\x9a\xe9\x80\xbb"\xf7{(\xacsX\xa8q1\xf0cW\x84,zs\xc2\xdc\xffi\xcae\xd0)E\xe7qLO^F\xcau\xfb6\n\xeb\x92\x8d&6\xcd\xb4\xa3SA\x16\x1d@\x8csvA*<\x13{\xf7\xed\xdb\x00\xc7\xf8\x02iG\xd5O\xaa\xef\x85\x02\n\xba\x914\x99\xed\r2E\xcas\xf7\x1e\x05\x97\xed\xf2\xae\xdb\xcb~K\xd9\x0e\xee\x9c\x1e\x88\xf1p\xcd^\x8c\xe2[\x9b\x9c,\x14\xdc[;\x84\xa7\xfc2L\xad\xb6\x03\x1a~\xed[\xc3\x04\x92!J\xe3\xf0\xbf\xf4t\xb7P\xcd\x1c\xd013\xae\'\xd0Z\xd3\xd3\xcex\n\xff\xaa\xe7\xb6X(m\x085\xa5\xcf\x01\x11\xf9\xe3\xeb\xde\xc0\xdb\x8e\x96\xaag\x16U\x88\x83\xb7\xe01\x03M\x02\xd6\x8aPO\xc2\xbf\x9c\x90\xd9|\x9eSd@\xf0O\xff\xac\x1d\xa5q\x04\x15E\x0e\xc4\xe6\xa3\x17\xd5\xcbn\x1cS\xd5/+\xde\xa2[\xb4\xa3\xf0\xe6qFG\x9e%\x940\xe8\xc3\xb4\x01\x82\x7fk\x11\xffB\xac\x92N\xa0\x12\t\xa3\xecY\xf7o\n\t\x03\xc4\xffT\xda2\xc3d\xcd\'\xd5\xd6\xf6\xd2\xb8\xe4\xa0 J\xd2B\xa9\xec\xf9\x82\xce\xe1\xd3\xec\xd5\x1fxB\xca\xd4\x01]\xfd\xafLM\xb9\x88\xe8\xccq|V\xd1+\xda\xae\x8a\x8bS\xeb\xa7o\xb5\x06Y\x0c\xebS\x1a\xef\x93\xdc\x8a\x81af\xb9\x19\xa4\xe7\xdb\xc5p\xdb\x8a\x89s\xcb\xe2\xedCS\x0e\x82Y\x01;\x8d\x06c\xbf\x86\xf88\x07\xba\x14m\xdcK\x82PiS\xfd\xca\xb4\xcf\x01\x02g\x15\xa8\xb9VF\xe78\x06d\xca)y\x1c2\xf7P\xe4\x87\xbb\x1f\xdb\x1e\xe4\'\x99\x0f\xc1\xea\xc56\xf8\xa4X%e\x86\xa1^\xa2\x01\x02\x13\x0e\xa9/\xf2\xdb\xed\xd7\x92\xf4\x1b\xc6\x05\xceM;\xf3\xd2&\x86o\x88\x171_\xcc\r\x9a\'`VR\xe5Q\x0b\xa1\xa0!>\x99\xb0\x1c\xe2U\x90\xd2\xc3)\x16t%]\xa4S|{o\x04g\x87\x00\x1d\xce~\x14\xc9\xa6(\xee$\x19,\nmT\xb5\xcf\'\xda\xe4\xa34\xfd\x01\xb8\xc5n\xc0\xd7\xf57\xb23o\xfc:\x88\x96\xafO\x1c\xe8\x19\\o\x05\xf5\xc3U\xdf<\r|!\xbadE\xe6g[$\xa9\xbb\xa8`4\x87\xdf\xac\xa1\xa3G\xa2\xba\x8cg\x1a\x1e7pKhT\xbe\x8c2._lE\x8b\xcf\x1d\xfc\xc6Qp\x03\x1fT\xb3m\xa8\x16\xc8\x8eP\xd58\x92\x98\x87RN\x98\xc2\xbf\x8e\x05\x8a\x83!\xa2Tl\xb4\x02\xfc\xbfE?\xeb\xcbZ\xd7\xff\x94\xcd\xce\xc7\xa3\xfd\xf6z\xb7\xe6g2\xcc9\x9c\xac\xe4\xfd\xc6\x8a\xc9D\xb4\xaeM\x88\x84\xb0#\xfbjH\xbcA.<\xa9+\xda\xe6\xdd\x993\xaeq\x17"y#\x08\x95\xa0\x96&~[\xdb\xf9Q\xed\xb6\xf0\xac\x95\nY\x8b\xe5\xf16\xd1\xe5\x91-\x03.\x07n\xd6\xb1A\xc8\x7f\x81\x13\xdf\x03tm%\xe4\xdav\xd5\x84{\x84\x85\x1f&\xd3\xce\xdb\xf0h\x95\n\xd26*\xef\xd2\xaa\xeeC\xa9\x92\xd2\x7fY\xfaw\xfe,\xa0\xe2J\xacx\r\xdc\xce#\x014\xf1\xde\x0e\xc0\x0c\x84\xa9\t\x95\x06\x89\x05x`\x15\xfc\xa0\xa7\x9ekf\xdf\xd4\xe9\r\xe5qI\xd2\x85\x11\xc0!W)\x1dT\xa2\x8ewi\xcd\x8b\xda\xfb\xfaI\xa02 A97BN"\xa8&\xa9Y\x88\x07u\xabI\xce\x0f\xe2\tK\x86\x14\xdc\xdf\xa0\xc9\xf9}\xc6\xe4\xdc\xfc"\xb8\xe5\xff\xfd\\y;\xd9\xef\x05i\'\xa3\x8aZ\xf5r\x07\xe7\xac\xf9\\(\n\xdb%6\xaa\x08O\xf8\xe4\xacX\x86\xd5\xbd\xc3\xb3\x7f\x1f7\x04:w"\xac\x01\x01Y\x83\xfe\\\xdf(F\xab8M.\xb1\xd9(\xbe*pC\xc5\xe6\xff\x1d\x19\t\x88ial@5\xe0/&\xc7\xf2\xf4E\x11I\x88hU\xdb\x8d?\xd6\xa9\xd7\x89\xa6\xada>K\x91A\xeeZ\x9e\xb7\xd8\xb7\xdc\xec\xc8\xe1Y%\x0b\xd9\xd4W\xfc%H\xe5\xc7z\x04\x96\xdf\x96\xc2\x1a00\xae%\x9c\xa7\x83\xeb1\xf9\x9d(\xbc\x03*\x9f\xdd\xc6\xbe\xc2%BO4h\xb8V\x85\xec\x00,\x8a\\\x0c\x17%G)\x11}2j\xef\xc2\xc10d\x903&\x01\xc7'
+2018-02-08 15:31:37 INFO     TCP Handler event: sock:12, event:1
+sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+2018-02-08 15:32:07 INFO     TCP Handler event: sock:13, event:1
+sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x15\x03\x03\x00\x1a\x00\x00\x00\x00\x00\x00\x00\x02\x03\xdb\x12RrO\x1c\xda\x04\xe7\x04H\xf53\x9eT\xd7\xd8'
+2018-02-08 15:32:07 INFO     TCP Handler event: sock:13, event:1
+sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {13: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 14: <shadowsocks.tcprelay.TCPRelayHandler object at 0x106738898>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51942)>
+self._remote_sock: <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51943), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51942)
+self._remote_address: ('xp.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b''
+2018-02-08 15:32:07 DEBUG    destroy: xp.apple.com:443
+2018-02-08 15:32:07 DEBUG    destroying remote
+2018-02-08 15:32:07 DEBUG    destroying local
+2018-02-08 15:32:08 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b'\x15\x03\x03\x00\x1a\x00\x00\x00\x00\x00\x00\x00\x03Yd,\xd7\xb2\xb7#W\x81i\x0bcc\x1a\xe5\xf0rZ'
+2018-02-08 15:32:08 INFO     TCP Handler event: sock:11, event:1
+sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 11: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>, 12: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105d0a668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51946)>
+self._remote_sock: <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51947), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51946)
+self._remote_address: ('su.itunes.apple.com', 443)
+=======================END===========================
+_on_local_read=========data: b''
+2018-02-08 15:32:08 DEBUG    destroy: su.itunes.apple.com:443
+2018-02-08 15:32:08 DEBUG    destroying remote
+2018-02-08 15:32:08 DEBUG    destroying local
+2018-02-08 15:32:38 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51945), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51944)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51945), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51944)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:32:38 DEBUG    destroy: mail.staff.sina.com.cn:443
+2018-02-08 15:32:38 DEBUG    destroying remote
+2018-02-08 15:32:38 DEBUG    destroying local
+2018-02-08 15:32:38 DEBUG    accept
+2018-02-08 15:32:38 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:32:38 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51948)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51948)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51948)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:32:38 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51948)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51948)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51948)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x16mail.staff.sina.com.cn\x01\xbb'
+data: b'\x03\x16mail.staff.sina.com.cn\x01\xbb'
+addrtype: 3
+data[1]: 22
+2018-02-08 15:32:38 INFO     connecting mail.staff.sina.com.cn:443 from 127.0.0.1:51948
+2018-02-08 15:32:38 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51948)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51948)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51949)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51948)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+_on_local_read=========data: b"\x16\x03\x01\x00\xbe\x01\x00\x00\xba\x03\x01i\x1dg\xf1\x02g5\xed\x0b\xb1]\xa2%O\xca\x15U\x1d1\xab/\xb4\\\x06'\xc9\xe8\xe6\xe7d]\xb4\x00\x00\x12\x00/\x003\x005\x009\xc0\t\xc0\n\xc0\x13\xc0\x14V\x00\x01\x00\x00\x7f\xff\x01\x00\x01\x00\x00\x00\x00\x1b\x00\x19\x00\x00\x16mail.staff.sina.com.cn\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x000\x00.\x02h2\x05h2-16\x05h2-15\x05h2-14\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18"
+2018-02-08 15:32:38 INFO     TCP Handler event: sock:10, event:4
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51949), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51948)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51949), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51948)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:33:38 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51949), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51948)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51949), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51948)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:33:38 DEBUG    destroy: mail.staff.sina.com.cn:443
+2018-02-08 15:33:38 DEBUG    destroying remote
+2018-02-08 15:33:38 DEBUG    destroying local
+2018-02-08 15:43:59 DEBUG    accept
+2018-02-08 15:43:59 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:43:59 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51959)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51959)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51959)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:43:59 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51959)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51959)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51959)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x16mail.staff.sina.com.cn\x01\xbb'
+data: b'\x03\x16mail.staff.sina.com.cn\x01\xbb'
+addrtype: 3
+data[1]: 22
+2018-02-08 15:43:59 INFO     connecting mail.staff.sina.com.cn:443 from 127.0.0.1:51959
+2018-02-08 15:43:59 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51959)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51959)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51960)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51959)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+_on_local_read=========data: b"\x16\x03\x01\x00\xec\x01\x00\x00\xe8\x03\x03xY~0\x81\xaf\x97\xd8#\x94\xdap\x03\xed\xdc\x87\x02\x00\xb1G\x1a\xba}v*\r!\x85\xadEQ\x1f\x00\x00(\xc0,\xc0+\xc0$\xc0#\xc0\n\xc0\t\xcc\xa9\xc00\xc0/\xc0(\xc0'\xc0\x14\xc0\x13\xcc\xa8\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x01\x00\x00\x97\xff\x01\x00\x01\x00\x00\x00\x00\x1b\x00\x19\x00\x00\x16mail.staff.sina.com.cn\x00\x17\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x000\x00.\x02h2\x05h2-16\x05h2-15\x05h2-14\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18"
+2018-02-08 15:43:59 INFO     TCP Handler event: sock:10, event:4
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51960), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51959)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51960), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51959)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:45:00 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51960), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51959)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51960), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51959)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:45:00 DEBUG    destroy: mail.staff.sina.com.cn:443
+2018-02-08 15:45:00 DEBUG    destroying remote
+2018-02-08 15:45:00 DEBUG    destroying local
+2018-02-08 15:45:00 DEBUG    accept
+2018-02-08 15:45:00 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:45:00 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51961)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51961)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51961)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:45:00 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51961)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51961)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51961)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x16mail.staff.sina.com.cn\x01\xbb'
+data: b'\x03\x16mail.staff.sina.com.cn\x01\xbb'
+addrtype: 3
+data[1]: 22
+2018-02-08 15:45:00 INFO     connecting mail.staff.sina.com.cn:443 from 127.0.0.1:51961
+2018-02-08 15:45:00 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51961)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51961)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51962)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51961)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+_on_local_read=========data: b"\x16\x03\x01\x00\xf2\x01\x00\x00\xee\x03\x03S\xf9\xeai\xdb_\x96eu&\xc0T\xc9+\xc7\x17\xc17\x1d\x1a\xcd^(\x1d\xb2\xb1\xa8\t\x04uzG\x00\x00.\xc0,\xc0+\xc0$\xc0#\xc0\n\xc0\t\xcc\xa9\xc00\xc0/\xc0(\xc0'\xc0\x14\xc0\x13\xcc\xa8\xc0\x08\xc0\x12\x00\x9d\x00\x9c\x00=\x00<\x005\x00/\x00\n\x01\x00\x00\x97\xff\x01\x00\x01\x00\x00\x00\x00\x1b\x00\x19\x00\x00\x16mail.staff.sina.com.cn\x00\x17\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x000\x00.\x02h2\x05h2-16\x05h2-15\x05h2-14\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18"
+2018-02-08 15:45:00 INFO     TCP Handler event: sock:10, event:4
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51962), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51961)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51962), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51961)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:46:01 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51962), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51961)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51962), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51961)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:46:01 DEBUG    destroy: mail.staff.sina.com.cn:443
+2018-02-08 15:46:01 DEBUG    destroying remote
+2018-02-08 15:46:01 DEBUG    destroying local
+2018-02-08 15:46:01 DEBUG    accept
+2018-02-08 15:46:01 DEBUG    chosen server: 47.52.67.159:443
+2018-02-08 15:46:01 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51963)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51963)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 51963)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00'
+2018-02-08 15:46:01 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51963)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51963)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51963)
+self._remote_address: null
+=======================END===========================
+_on_local_read=========data: b'\x05\x01\x00\x03\x16mail.staff.sina.com.cn\x01\xbb'
+data: b'\x03\x16mail.staff.sina.com.cn\x01\xbb'
+addrtype: 3
+data[1]: 22
+2018-02-08 15:46:01 INFO     connecting mail.staff.sina.com.cn:443 from 127.0.0.1:51963
+2018-02-08 15:46:01 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51963)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51963)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51964)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51963)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+_on_local_read=========data: b'\x16\x03\x01\x00\xbe\x01\x00\x00\xba\x03\x01\xaa\xb9:\xf4\x01j_\xe4q0n\x0b$9\\x\xf5-\x84\xae\xf2\xa4z\x0f,k\xf7\xcb\xfb2d\x93\x00\x00\x12\x00/\x003\x005\x009\xc0\t\xc0\n\xc0\x13\xc0\x14V\x00\x01\x00\x00\x7f\xff\x01\x00\x01\x00\x00\x00\x00\x1b\x00\x19\x00\x00\x16mail.staff.sina.com.cn\x00\x17\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x003t\x00\x00\x00\x12\x00\x00\x00\x10\x000\x00.\x02h2\x05h2-16\x05h2-15\x05h2-14\x08spdy/3.1\x06spdy/3\x08http/1.1\x00\x0b\x00\x02\x01\x00\x00\n\x00\x08\x00\x06\x00\x1d\x00\x17\x00\x18'
+2018-02-08 15:46:01 INFO     TCP Handler event: sock:10, event:4
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51964), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51963)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51964), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51963)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:47:01 INFO     TCP Handler event: sock:10, event:1
+sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51964), raddr=('47.52.67.159', 443)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105d33c50>
+self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10669e400>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x10669e358>
+self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 51963)>
+self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 51964), raddr=('47.52.67.159', 443)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x1062aa6a0>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 51963)
+self._remote_address: ('mail.staff.sina.com.cn', 443)
+=======================END===========================
+2018-02-08 15:47:01 DEBUG    destroy: mail.staff.sina.com.cn:443
+2018-02-08 15:47:01 DEBUG    destroying remote
+2018-02-08 15:47:01 DEBUG    destroying local

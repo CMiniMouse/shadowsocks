@@ -140,7 +140,10 @@ def pack_addr(address):
 
 
 def parse_header(data):
+    print("data:", data)
     addrtype = ord(data[0])
+    print("addrtype:", addrtype)
+    print("data[1]:", data[1])
     dest_addr = None
     dest_port = None
     header_length = 0

@@ -149,7 +149,15 @@ class UDPRelay(object):
             logging.debug('UDP handle_server: data is empty')
         if self._stat_callback:
             self._stat_callback(self._listen_port, len(data))
+        
+        #如果该UDP socket作为ss-local的服务端,则从client接收数据
+        #如果该UDP socket作为ss-server的客户端,则将client接收的数据加密
         if self._is_local:
+            import json
+            #json.dumps(data).encode()
+            #data = json.loads(data.decode())
+            print("_handle_server:data:", data)
+            print("_handle_server:r_addr:", r_addr)
             frag = common.ord(data[2])
             if frag != 0:
                 logging.warn('drop a message since frag is not 0')
@@ -163,6 +171,7 @@ class UDPRelay(object):
                 logging.debug('UDP handle_server: data is empty after decrypt')
                 return
         header_result = parse_header(data)
+        print("header_result", header_result)
         if header_result is None:
             return
         addrtype, dest_addr, dest_port, header_length = header_result
@@ -172,6 +181,7 @@ class UDPRelay(object):
         else:
             server_addr, server_port = dest_addr, dest_port
 
+        print("server_addr, server_port:",server_addr, server_port)
         addrs = self._dns_cache.get(server_addr, None)
         if addrs is None:
             addrs = socket.getaddrinfo(server_addr, server_port, 0,
@@ -185,6 +195,8 @@ class UDPRelay(object):
         af, socktype, proto, canonname, sa = addrs[0]
         key = client_key(r_addr, af)
         client = self._cache.get(key, None)
+        print("addrs:", addrs)
+        print("client:", client)
         if not client:
             # TODO async getaddrinfo
             if self._forbidden_iplist:
@@ -202,7 +214,9 @@ class UDPRelay(object):
             self._eventloop.add(client, eventloop.POLL_IN, self)
 
         if self._is_local:
+            print("data before encrypt:", data)
             data = encrypt.encrypt_all(self._password, self._method, 1, data)
+            print("data after encrypt:", data)
             if not data:
                 return
         else:
@@ -254,6 +268,7 @@ class UDPRelay(object):
             pass
 
     def add_to_loop(self, loop):
+        logging.info("cxq:UDPRelay add_to_loop")
         if self._eventloop:
             raise Exception('already add to loop')
         if self._closed:
@@ -266,6 +281,10 @@ class UDPRelay(object):
         loop.add_periodic(self.handle_periodic)
 
     def handle_event(self, sock, fd, event):
+        logging.info("UDPRelay handle_event")
+        print("sock:", sock)
+        print("fd:%d", fd)
+        print("event", event)
         if sock == self._server_socket:
             if event & eventloop.POLL_ERR:
                 logging.error('UDP server_socket err')

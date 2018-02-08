@@ -353,6 +353,7 @@ class DNSResolver(object):
                             break
 
     def handle_event(self, sock, fd, event):
+        logging.info("cxq:DNSResolver handle_event")
         if sock != self._sock:
             return
         if event & eventloop.POLL_ERR:

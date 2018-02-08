@@ -133,6 +133,22 @@ class TCPRelayHandler(object):
         # we want to eliminate collisions
         return id(self)
 
+    def _get_handler_member(self):
+        print("=======================START===========================")
+        print("self._server:", self._server)
+        print("self._fd_to_handlers:", self._fd_to_handlers)
+        print("self._loop:", self._loop)
+        print("self._local_sock:", self._local_sock)
+        print("self._remote_sock:", self._remote_sock or "null")
+        print("self._dns_resolver:", self._dns_resolver)
+        print("self._is_local:", self._is_local)
+        print("self._stage:", self._stage)
+        print("self._upstream_status:", self._upstream_status)
+        print("self._downstream_status:", self._downstream_status)
+        print("self._client_address:", self._client_address)
+        print("self._remote_address:", self._remote_address or "null")
+        print("=======================END===========================")
+    
     @property
     def remote_address(self):
         return self._remote_address
@@ -393,6 +409,7 @@ class TCPRelayHandler(object):
         data = None
         try:
             data = self._local_sock.recv(BUF_SIZE)
+            print("_on_local_read=========data:", data)
         except (OSError, IOError) as e:
             if eventloop.errno_from_exception(e) in \
                     (errno.ETIMEDOUT, errno.EAGAIN, errno.EWOULDBLOCK):
@@ -480,6 +497,9 @@ class TCPRelayHandler(object):
         self.destroy()
 
     def handle_event(self, sock, event):
+        logging.info("TCP Handler event: sock:%d, event:%d" % (sock.fileno(), event))
+        print("sock:", sock)
+        self._get_handler_member()
         # handle all events in this handler and dispatch them to methods
         if self._stage == STAGE_DESTROYED:
             logging.debug('ignore handle_event: destroyed')

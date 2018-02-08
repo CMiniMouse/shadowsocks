@@ -267,7 +267,7 @@ def get_config(is_local):
     else:
         level = logging.INFO
     verbose = config['verbose']
-    logging.basicConfig(level=level,
+    logging.basicConfig(level=logging.DEBUG,
                         format='%(asctime)s %(levelname)-8s %(message)s',
                         datefmt='%Y-%m-%d %H:%M:%S')
 
