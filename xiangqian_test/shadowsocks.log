@@ -1,169 +1,578 @@
 
-2018-02-08 17:24:09 DEBUG    accept
-2018-02-08 17:24:09 DEBUG    chosen server: 47.52.67.159:8081
-2018-02-08 17:24:09 INFO     TCP Handler event: sock:9, event:1
-sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52650)>
+2018-02-08 22:35:33 DEBUG    accept
+2018-02-08 22:35:33 DEBUG    chosen server: 47.52.67.159:8081
+2018-02-08 22:35:33 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53119)>
 =======================START===========================
-self._server: <shadowsocks.tcprelay.TCPRelay object at 0x10e3f4c50>
-self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>}
-self._loop: <shadowsocks.eventloop.EventLoop object at 0x10ee7fa90>
-self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52650)>
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1064964e0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53119)>
 self._remote_sock: null
-self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x10ea4f748>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
 self._is_local: True
 self._stage: 0
 self._upstream_status: 1
 self._downstream_status: 0
-self._client_address: ('127.0.0.1', 52650)
+self._client_address: ('127.0.0.1', 53119)
 self._remote_address: null
 self._chosen_server: ('47.52.67.159', 8081)
 =======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
 _on_local_read=========data: b'\x05\x02\x00\x02'
-2018-02-08 17:24:10 INFO     TCP Handler event: sock:9, event:1
-sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52650)>
+2018-02-08 22:35:34 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53119)>
 =======================START===========================
-self._server: <shadowsocks.tcprelay.TCPRelay object at 0x10e3f4c50>
-self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>}
-self._loop: <shadowsocks.eventloop.EventLoop object at 0x10ee7fa90>
-self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52650)>
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1064964e0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53119)>
 self._remote_sock: null
-self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x10ea4f748>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
 self._is_local: True
 self._stage: 1
 self._upstream_status: 1
 self._downstream_status: 1
-self._client_address: ('127.0.0.1', 52650)
+self._client_address: ('127.0.0.1', 53119)
 self._remote_address: null
 self._chosen_server: ('47.52.67.159', 8081)
 =======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
 _on_local_read=========data: b'\x05\x01\x00\x03\x11www.google.com.hk\x01\xbb'
 data: b'\x03\x11www.google.com.hk\x01\xbb'
 addrtype: 3
 data[1]: 17
-2018-02-08 17:24:10 INFO     connecting www.google.com.hk:443 from 127.0.0.1:52650
+2018-02-08 22:35:34 INFO     connecting www.google.com.hk:443 from 127.0.0.1:53119
 
 --------------->_handle_dns_resolved<----------------
 
 result: (b'47.52.67.159', b'47.52.67.159')
-2018-02-08 17:24:10 INFO     TCP Handler event: sock:10, event:4
-sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 52651), raddr=('47.52.67.159', 8081)>
+2018-02-08 22:35:34 INFO     TCP Handler event: sock:9, event:4
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53120), raddr=('47.52.67.159', 8081)>
 =======================START===========================
-self._server: <shadowsocks.tcprelay.TCPRelay object at 0x10e3f4c50>
-self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>}
-self._loop: <shadowsocks.eventloop.EventLoop object at 0x10ee7fa90>
-self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52650)>
-self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 52651), raddr=('47.52.67.159', 8081)>
-self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x10ea4f748>
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1064964e0>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1064964e0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53119)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53120), raddr=('47.52.67.159', 8081)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
 self._is_local: True
 self._stage: 4
 self._upstream_status: 3
 self._downstream_status: 1
-self._client_address: ('127.0.0.1', 52650)
+self._client_address: ('127.0.0.1', 53119)
 self._remote_address: ('www.google.com.hk', 443)
 self._chosen_server: ('47.52.67.159', 8081)
 =======================END===========================
-------->_on_remote_write<--------senddata b'\x8b\x1e\xf1/\xc8\x92V\xec\xc6.\xd4\x06\xc4\xba\x16\xd9[S\xc5T\xe9D\xcd_\xc2Q\xf7RQ\x90\xc2\xd2\xe6[1\xdd\x8a'
-2018-02-08 17:24:20 INFO     TCP Handler event: sock:10, event:1
-sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 52651), raddr=('47.52.67.159', 8081)>
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+WWWWWWWWWWWWWWWWWWW:_on_remote_write--senddata: b"\xecS\xe3\x07\xf0\xc1\xd267]e\xd3\xef\xf9W=\x13\x1d\xe1\xe1\xbf\xc1\xffP\xf9\xa070\xae'DiO^\x11p?"
+2018-02-08 22:35:34 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53120)>
 =======================START===========================
-self._server: <shadowsocks.tcprelay.TCPRelay object at 0x10e3f4c50>
-self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>}
-self._loop: <shadowsocks.eventloop.EventLoop object at 0x10ee7fa90>
-self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52650)>
-self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 52651), raddr=('47.52.67.159', 8081)>
-self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x10ea4f748>
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1064964e0>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x1064964e0>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53119)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53120)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
 self._is_local: True
 self._stage: 5
 self._upstream_status: 1
 self._downstream_status: 1
-self._client_address: ('127.0.0.1', 52650)
+self._client_address: ('127.0.0.1', 53119)
 self._remote_address: ('www.google.com.hk', 443)
 self._chosen_server: ('47.52.67.159', 8081)
 =======================END===========================
-2018-02-08 17:24:20 DEBUG    destroy: www.google.com.hk:443
-2018-02-08 17:24:20 DEBUG    destroying remote
-2018-02-08 17:24:20 DEBUG    destroying local
-2018-02-08 17:26:59 DEBUG    accept
-2018-02-08 17:26:59 DEBUG    chosen server: 47.52.67.159:8081
-2018-02-08 17:26:59 INFO     TCP Handler event: sock:9, event:1
-sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52655)>
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+2018-02-08 22:35:34 DEBUG    destroy: www.google.com.hk:443
+2018-02-08 22:35:34 DEBUG    destroying remote
+2018-02-08 22:35:34 DEBUG    destroying local
+2018-02-08 22:42:43 DEBUG    accept
+2018-02-08 22:42:43 DEBUG    chosen server: 47.52.67.159:8081
+2018-02-08 22:42:43 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53176)>
 =======================START===========================
-self._server: <shadowsocks.tcprelay.TCPRelay object at 0x10e3f4c50>
-self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>}
-self._loop: <shadowsocks.eventloop.EventLoop object at 0x10ee7fa90>
-self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52655)>
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53176)>
 self._remote_sock: null
-self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x10ea4f748>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
 self._is_local: True
 self._stage: 0
 self._upstream_status: 1
 self._downstream_status: 0
-self._client_address: ('127.0.0.1', 52655)
+self._client_address: ('127.0.0.1', 53176)
 self._remote_address: null
 self._chosen_server: ('47.52.67.159', 8081)
 =======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
 _on_local_read=========data: b'\x05\x02\x00\x02'
-2018-02-08 17:27:00 INFO     TCP Handler event: sock:9, event:1
-sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52655)>
+2018-02-08 22:42:45 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53176)>
 =======================START===========================
-self._server: <shadowsocks.tcprelay.TCPRelay object at 0x10e3f4c50>
-self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>}
-self._loop: <shadowsocks.eventloop.EventLoop object at 0x10ee7fa90>
-self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52655)>
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53176)>
 self._remote_sock: null
-self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x10ea4f748>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
 self._is_local: True
 self._stage: 1
 self._upstream_status: 1
 self._downstream_status: 1
-self._client_address: ('127.0.0.1', 52655)
+self._client_address: ('127.0.0.1', 53176)
 self._remote_address: null
 self._chosen_server: ('47.52.67.159', 8081)
 =======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
 _on_local_read=========data: b'\x05\x01\x00\x03\x11www.google.com.hk\x01\xbb'
 data: b'\x03\x11www.google.com.hk\x01\xbb'
 addrtype: 3
 data[1]: 17
-2018-02-08 17:27:00 INFO     connecting www.google.com.hk:443 from 127.0.0.1:52655
+2018-02-08 22:42:45 INFO     connecting www.google.com.hk:443 from 127.0.0.1:53176
 
 --------------->_handle_dns_resolved<----------------
 
 result: (b'47.52.67.159', b'47.52.67.159')
-2018-02-08 17:27:00 INFO     TCP Handler event: sock:10, event:4
-sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 52656), raddr=('47.52.67.159', 8081)>
+2018-02-08 22:42:45 INFO     TCP Handler event: sock:9, event:4
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53177), raddr=('47.52.67.159', 8081)>
 =======================START===========================
-self._server: <shadowsocks.tcprelay.TCPRelay object at 0x10e3f4c50>
-self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>}
-self._loop: <shadowsocks.eventloop.EventLoop object at 0x10ee7fa90>
-self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52655)>
-self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 52656), raddr=('47.52.67.159', 8081)>
-self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x10ea4f748>
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53176)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53177), raddr=('47.52.67.159', 8081)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
 self._is_local: True
 self._stage: 4
 self._upstream_status: 3
 self._downstream_status: 1
-self._client_address: ('127.0.0.1', 52655)
+self._client_address: ('127.0.0.1', 53176)
 self._remote_address: ('www.google.com.hk', 443)
 self._chosen_server: ('47.52.67.159', 8081)
 =======================END===========================
-------->_on_remote_write<--------senddata b'\xb8\xdc~\xbd1\x05\xb2!wl\x1e\xd1\x07\x80l\xc0\xb47\xe4\x8e+1\x05 w\x19\xfc\xbe\xdca*\x1d\x18\x91Djx'
-2018-02-08 17:27:10 INFO     TCP Handler event: sock:10, event:1
-sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 52656), raddr=('47.52.67.159', 8081)>
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+WWWWWWWWWWWWWWWWWWW:_on_remote_write--senddata: b"]\x96m\x02,\\&U\xdf\xec\xb8\x98m2C}39\x1aO\x0f\xb76\ny\xb9\xf2\x03\\\x8e+V\xf4\x89'\x01\t"
+2018-02-08 22:42:45 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53177)>
 =======================START===========================
-self._server: <shadowsocks.tcprelay.TCPRelay object at 0x10e3f4c50>
-self._fd_to_handlers: {9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>, 10: <shadowsocks.tcprelay.TCPRelayHandler object at 0x10ee7fb00>}
-self._loop: <shadowsocks.eventloop.EventLoop object at 0x10ee7fa90>
-self._local_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 52655)>
-self._remote_sock: <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('10.222.9.19', 52656), raddr=('47.52.67.159', 8081)>
-self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x10ea4f748>
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53176)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53177)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
 self._is_local: True
 self._stage: 5
 self._upstream_status: 1
 self._downstream_status: 1
-self._client_address: ('127.0.0.1', 52655)
+self._client_address: ('127.0.0.1', 53176)
 self._remote_address: ('www.google.com.hk', 443)
 self._chosen_server: ('47.52.67.159', 8081)
 =======================END===========================
-2018-02-08 17:27:10 DEBUG    destroy: www.google.com.hk:443
-2018-02-08 17:27:10 DEBUG    destroying remote
-2018-02-08 17:27:10 DEBUG    destroying local
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+2018-02-08 22:42:45 DEBUG    destroy: www.google.com.hk:443
+2018-02-08 22:42:45 DEBUG    destroying remote
+2018-02-08 22:42:45 DEBUG    destroying local
+2018-02-08 22:46:41 DEBUG    accept
+2018-02-08 22:46:41 DEBUG    chosen server: 47.52.67.159:8081
+2018-02-08 22:46:41 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53183)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53183)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 53183)
+self._remote_address: null
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_local_read=========data: b'\x05\x02\x00\x02'
+2018-02-08 22:46:42 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53183)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53183)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53183)
+self._remote_address: null
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_local_read=========data: b'\x05\x01\x00\x03\x11www.google.com.hk\x01\xbb'
+data: b'\x03\x11www.google.com.hk\x01\xbb'
+addrtype: 3
+data[1]: 17
+2018-02-08 22:46:42 INFO     connecting www.google.com.hk:443 from 127.0.0.1:53183
+
+--------------->_handle_dns_resolved<----------------
+
+result: (b'47.52.67.159', b'47.52.67.159')
+2018-02-08 22:46:43 INFO     TCP Handler event: sock:9, event:4
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53184), raddr=('47.52.67.159', 8081)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53183)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53184), raddr=('47.52.67.159', 8081)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53183)
+self._remote_address: ('www.google.com.hk', 443)
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+WWWWWWWWWWWWWWWWWWW:_on_remote_write--senddata: b't\xa6\xdd\xe0\xa4\xac\xc7\xac\xdej\x98p\x89\xde}\xc4N\xed\x0f_\x19<B\xb9\xacJ\xb2\xb3\xe1\x1b\xb6\xf9\x1a\xae\xfei\x8f'
+2018-02-08 22:46:44 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53184)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53183)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53184)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53183)
+self._remote_address: ('www.google.com.hk', 443)
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+2018-02-08 22:46:44 DEBUG    destroy: www.google.com.hk:443
+2018-02-08 22:46:44 DEBUG    destroying remote
+2018-02-08 22:46:44 DEBUG    destroying local
+2018-02-08 22:49:45 DEBUG    accept
+2018-02-08 22:49:45 DEBUG    chosen server: 47.52.67.159:8081
+2018-02-08 22:49:45 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53189)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53189)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 53189)
+self._remote_address: null
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_local_read=========data: b'\x05\x02\x00\x02'
+2018-02-08 22:49:46 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53189)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53189)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53189)
+self._remote_address: null
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_local_read=========data: b'\x05\x01\x00\x03\x11www.google.com.hk\x01\xbb'
+data: b'\x03\x11www.google.com.hk\x01\xbb'
+addrtype: 3
+data[1]: 17
+2018-02-08 22:49:46 INFO     connecting www.google.com.hk:443 from 127.0.0.1:53189
+
+--------------->_handle_dns_resolved<----------------
+
+result: (b'47.52.67.159', b'47.52.67.159')
+2018-02-08 22:49:46 INFO     TCP Handler event: sock:9, event:4
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53190), raddr=('47.52.67.159', 8081)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53189)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53190), raddr=('47.52.67.159', 8081)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53189)
+self._remote_address: ('www.google.com.hk', 443)
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+WWWWWWWWWWWWWWWWWWW:_on_remote_write--senddata: b"j\xaa'\x91Z\x15\xd0}\x19\x93\xdc/X\xd1\xaa\xba\x1d\x86\xf9*3y\x02\x05\xddk\xd3\xf4\x03\x8cK\xfbX369 "
+2018-02-08 22:49:46 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53190)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53189)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53190)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53189)
+self._remote_address: ('www.google.com.hk', 443)
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+2018-02-08 22:49:46 DEBUG    destroy: www.google.com.hk:443
+2018-02-08 22:49:46 DEBUG    destroying remote
+2018-02-08 22:49:46 DEBUG    destroying local
+2018-02-08 22:51:10 DEBUG    accept
+2018-02-08 22:51:10 DEBUG    chosen server: 47.52.67.159:8081
+2018-02-08 22:51:10 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53208)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53208)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 53208)
+self._remote_address: null
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_local_read=========data: b'\x05\x02\x00\x02'
+2018-02-08 22:51:11 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53208)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53208)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53208)
+self._remote_address: null
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_local_read=========data: b'\x05\x01\x00\x03\x11www.google.com.hk\x01\xbb'
+data: b'\x03\x11www.google.com.hk\x01\xbb'
+addrtype: 3
+data[1]: 17
+2018-02-08 22:51:11 INFO     connecting www.google.com.hk:443 from 127.0.0.1:53208
+
+--------------->_handle_dns_resolved<----------------
+
+result: (b'47.52.67.159', b'47.52.67.159')
+2018-02-08 22:51:11 INFO     TCP Handler event: sock:9, event:4
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53209), raddr=('47.52.67.159', 8081)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53208)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53209), raddr=('47.52.67.159', 8081)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53208)
+self._remote_address: ('www.google.com.hk', 443)
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+WWWWWWWWWWWWWWWWWWW:_on_remote_write--senddata: b'c\xbb5s\xcb\xafe\xc8\xff\xa9\xf3\x0c\xb6\x8b&\x04\x1dyD\xd5Q\xe3B\xe0^\xa2\x108-p\xd1\xc5\xee\x151\xf5\x01'
+2018-02-08 22:51:12 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53209)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53208)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53209)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53208)
+self._remote_address: ('www.google.com.hk', 443)
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+2018-02-08 22:51:12 DEBUG    destroy: www.google.com.hk:443
+2018-02-08 22:51:12 DEBUG    destroying remote
+2018-02-08 22:51:12 DEBUG    destroying local
+2018-02-08 22:54:07 DEBUG    accept
+2018-02-08 22:54:07 DEBUG    chosen server: 47.52.67.159:8081
+2018-02-08 22:54:07 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53227)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53227)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 0
+self._upstream_status: 1
+self._downstream_status: 0
+self._client_address: ('127.0.0.1', 53227)
+self._remote_address: null
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_local_read=========data: b'\x05\x02\x00\x02'
+2018-02-08 22:54:08 INFO     TCP Handler event: sock:8, event:1
+sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53227)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53227)>
+self._remote_sock: null
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 1
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53227)
+self._remote_address: null
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_local_read=========data: b'\x05\x01\x00\x03\x11www.google.com.hk\x01\xbb'
+data: b'\x03\x11www.google.com.hk\x01\xbb'
+addrtype: 3
+data[1]: 17
+2018-02-08 22:54:08 INFO     connecting www.google.com.hk:443 from 127.0.0.1:53227
+
+--------------->_handle_dns_resolved<----------------
+
+result: (b'47.52.67.159', b'47.52.67.159')
+2018-02-08 22:54:08 INFO     TCP Handler event: sock:9, event:4
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53228), raddr=('47.52.67.159', 8081)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53227)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53228), raddr=('47.52.67.159', 8081)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 4
+self._upstream_status: 3
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53227)
+self._remote_address: ('www.google.com.hk', 443)
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+WWWWWWWWWWWWWWWWWWW:_on_remote_write--senddata: b'\xc4z\xf0\x9dp%\xf0HD\t6\xeb\xc89\rW\x8d<\xcc\xda\x1bm\x14\x987\xef5[\xd6\t\x89\xdb\xd8&\x95\x83E'
+2018-02-08 22:54:18 INFO     TCP Handler event: sock:9, event:1
+sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53228), raddr=('47.52.67.159', 8081)>
+=======================START===========================
+self._server: <shadowsocks.tcprelay.TCPRelay object at 0x105b2cc50>
+self._fd_to_handlers: {8: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>, 9: <shadowsocks.tcprelay.TCPRelayHandler object at 0x105b03668>}
+self._loop: <shadowsocks.eventloop.EventLoop object at 0x106496390>
+self._local_sock: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('127.0.0.1', 1082), raddr=('127.0.0.1', 53227)>
+self._remote_sock: <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.103', 53228), raddr=('47.52.67.159', 8081)>
+self._dns_resolver: <shadowsocks.asyncdns.DNSResolver object at 0x106484668>
+self._is_local: True
+self._stage: 5
+self._upstream_status: 1
+self._downstream_status: 1
+self._client_address: ('127.0.0.1', 53227)
+self._remote_address: ('www.google.com.hk', 443)
+self._chosen_server: ('47.52.67.159', 8081)
+=======================END===========================
+
+::::::::::::::::::::::::::::::: sslocal :::::::::::::::::::::::::::::::
+
+_on_remote_read======> data b''
+2018-02-08 22:54:18 DEBUG    destroy: www.google.com.hk:443
+2018-02-08 22:54:18 DEBUG    destroying remote
+2018-02-08 22:54:18 DEBUG    destroying local

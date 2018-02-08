@@ -28,14 +28,14 @@ print(addrs)
 
 af, socktype, proto, canonname, sockaddr = addrs[0]
 print(sockaddr)
-'''
+
 server_socket = socket.socket(af, socktype, proto)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server_socket.bind(sockaddr)
 server_socket.setblocking(False)
 server_socket.listen(1024)
 server_socket.close()
-'''
+
 import select
 
 if hasattr(select, 'epoll'):
@@ -98,8 +98,6 @@ print('iv = ', iv)
 iv = iv[:16]
 print('iv = ', iv)
 
-data = b'\x03\x0ewww.google.com\x00\x50'
+str = 'www.google.com.hk'
+print(str.encode('ascii'))
 
-print(data)
-print(data.decode()[2])
-print(data.decode()[0])

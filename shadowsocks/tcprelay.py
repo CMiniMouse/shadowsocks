@@ -147,7 +147,8 @@ class TCPRelayHandler(object):
         print("self._downstream_status:", self._downstream_status)
         print("self._client_address:", self._client_address)
         print("self._remote_address:", self._remote_address or "null")
-        print("self._chosen_server:", self._chosen_server)
+        if self._is_local:
+            print("self._chosen_server:", self._chosen_server or "null")
         print("=======================END===========================")
     
     @property
@@ -325,8 +326,12 @@ class TCPRelayHandler(object):
                 self._dns_resolver.resolve(self._chosen_server[0],
                                            self._handle_dns_resolved)
             else:
+                print("_handle_stage_addr:$$$$$data:", data)
+                print("len_data:", len(data))
+                print("header_length:", header_length)
                 if len(data) > header_length:
                     self._data_to_write_to_remote.append(data[header_length:])
+                    print("self._data_to_write_to_remote:", self._data_to_write_to_remote)
                 # notice here may go into _handle_dns_resolved directly
                 self._dns_resolver.resolve(remote_addr,
                                            self._handle_dns_resolved)
@@ -484,6 +489,10 @@ class TCPRelayHandler(object):
 
     def _on_remote_write(self):
         # handle remote writable event
+        if self._is_local:
+            print("\r\n::::::::::::::::::::::::::::::: sslocal  _on_remote_write :::::::::::::::::::::::::::::::\r\n")
+        else:
+            print("\r\n::::::::::::::::::::::::::::::: ssserver _on_remote_write:::::::::::::::::::::::::::::::\r\n")
         self._stage = STAGE_STREAM
         if self._data_to_write_to_remote:
             data = b''.join(self._data_to_write_to_remote)
